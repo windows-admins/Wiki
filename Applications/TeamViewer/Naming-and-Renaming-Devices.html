@@ -2,7 +2,7 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-11T23:02:38.757Z
+date: 2022-09-11T23:12:10.795Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
@@ -68,15 +68,15 @@ if ($null -ne $TeamViewerID) {
 	#Search for the device in TeamViewer API by remotecontrol_id using the devices endpoint
 	$TVDevice = (Invoke-WebRequest -Uri $TVURL -UseBasicParsing -Headers $header).Content | ConvertFrom-Json
 	if ($TVDevice.devices.Count -eq 1) { #Check if the API returns 1 match
-    	if ($TVDevice.devices.alias -eq $ComputerName) { #Check if names match
-        	Write-Host "Device name is up-to-date."
-    	} else {
-        	Write-Host "Device name is out of date."
-        	Stop-Transcript -ErrorAction SilentlyContinue
-        	Exit 1
-    	}
+ 		if ($TVDevice.devices.alias -eq $ComputerName) { #Check if names match
+ 		Write-Host "Device name is up-to-date."
+ 		} else {
+ 			Write-Host "Device name is out of date."
+		Stop-Transcript -ErrorAction SilentlyContinue
+		Exit 1
+		}
 	} else {
-    	Write-Host "Device not found in TeamViewer."
+		Write-Host "Device not found in TeamViewer."
 	}
 }
 Stop-Transcript -ErrorAction SilentlyContinue
