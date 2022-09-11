@@ -2,13 +2,13 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-11T23:39:18.809Z
+date: 2022-09-11T23:41:41.473Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
 -->
 
-<p><span class="text-huge"><strong>Set the device alias on install</strong></span></p>
+<h3><span class="text-huge"><strong>Set the device alias on install</strong></span></h3>
 <p>By default, the TeamViewer Full and Host clients on Windows limit the device's alias to 15 characters during install - this is not a database limitation, since you can manually set aliases beyond 15 characters - and while the macOS clients don't have a character limit for their alias, they use the local hostname, which has a trailing “.local” in the name, but it may include other strings related to the device's ISP domain as well.</p>
 <p>This may cause a disparity in the naming conventions if you use Intune or other tools to manage your devices. Intune, in particular, doesn't have a 15 character limit to name devices on Windows, and for macOS, it uses the Computer Name.</p>
 <p>To work around this behavior on TeamViewer, you can use the “-alias” command line parameter to tell TeamViewer to use a specific custom name for your devices' alias during install - these commands should be used “immediately” after the TeamViewer clients are installed, and you should usually wait around 30 seconds for them to work properly, so I'm including such wait commands as well:</p>
@@ -25,7 +25,7 @@ Start-Process "C:\Program Files (x86)\TeamViewer\TeamViewer.exe" -Wait -WindowSt
 <pre><code class="language-plaintext">sleep 30
 /Applications/TeamViewerHost.app/Contents/Helpers/TeamViewer_Assignment -alias &lt;Your Custom Computer Name here&gt;</code></pre>
 <p>&nbsp;</p>
-<p><span class="text-huge"><strong>Automating device renaming</strong></span></p>
+<h3><span class="text-huge"><strong>Automating device renaming</strong></span></h3>
 <p>Since the TeamViewer clients won't update the device's TeamViewer alias automatically after their names are changed locally, you may want a way to automate renaming them, instead of manually doing that directly on TeamViewer.</p>
 <p>To use any of the scripts covered below, if you don't have one already, you'll need to create a new TeamViewer Script API Token with “Computers &amp; Contacts” &gt; “View entries” and “Edit entries” permissions - more info <a href="https://www.teamviewer.com/en-us/for-developers/#create-script-section">here</a>.</p>
 <p><span class="text-big"><strong>Windows</strong></span></p>
