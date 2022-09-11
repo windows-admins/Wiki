@@ -2,7 +2,7 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-11T23:12:10.795Z
+date: 2022-09-11T23:15:38.632Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
@@ -48,7 +48,7 @@ $ComputerName = ([System.Net.Dns]::GethostName()).ToUpper()
 
 #Customize your log path here
 $logPath = "C:\Temp"
-if(!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
+if (!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
 $logPath += "\TV_Name_Detection.log"
 
 Start-Transcript -Path $logPath -Force -ErrorAction SilentlyContinue
@@ -63,24 +63,26 @@ try{
         Write-Host "TeamViewer ID Not Found in Registry"
     }
 }
+
 if ($null -ne $TeamViewerID) {
-	$TVURL += "r$TeamViewerID"
-	#Search for the device in TeamViewer API by remotecontrol_id using the devices endpoint
-	$TVDevice = (Invoke-WebRequest -Uri $TVURL -UseBasicParsing -Headers $header).Content | ConvertFrom-Json
-	if ($TVDevice.devices.Count -eq 1) { #Check if the API returns 1 match
- 		if ($TVDevice.devices.alias -eq $ComputerName) { #Check if names match
- 		Write-Host "Device name is up-to-date."
- 		} else {
- 			Write-Host "Device name is out of date."
-		Stop-Transcript -ErrorAction SilentlyContinue
-		Exit 1
-		}
-	} else {
-		Write-Host "Device not found in TeamViewer."
-	}
+    $TVURL += "r$TeamViewerID"
+    #Search for the device in TeamViewer API by remotecontrol_id using the devices endpoint
+    $TVDevice = (Invoke-WebRequest -Uri $TVURL -UseBasicParsing -Headers $header).Content | ConvertFrom-Json
+    if ($TVDevice.devices.Count -eq 1) { #Check if the API returns 1 match
+        if ($TVDevice.devices.alias -eq $ComputerName) { #Check if names match
+            Write-Host "Device name is up-to-date."
+        } else {
+            Write-Host "Device name is out of date."
+            Stop-Transcript -ErrorAction SilentlyContinue
+            Exit 1
+        }
+    } else {
+        Write-Host "Device not found in TeamViewer."
+    }
 }
 Stop-Transcript -ErrorAction SilentlyContinue
-Exit 0</code></pre>
+Exit 0
+</code></pre>
 <p><span class="text-big">Remediation Script</span></p>
 <pre><code class="language-plaintext">#Get your TeamViewer Script API token with Computers &amp; Contacts &gt; view entries and edit entries permissions: https://www.teamviewer.com/en-us/for-developers/#create-script-section
 #Enter your TeamViewer Script API token here:
@@ -100,7 +102,7 @@ $ComputerName = ([System.Net.Dns]::GethostName()).ToUpper()
 
 #Customize your log path here
 $logPath = "C:\Temp"
-if(!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
+if (!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
 $logPath += "\TV_Name_Remediation.log"
 
 Start-Transcript -Path $logPath -Force -ErrorAction SilentlyContinue
@@ -118,31 +120,31 @@ try{
 }
 
 if ($null -ne $TeamViewerID) {
-	$TVURLDevice += "r$TeamViewerID"
-	#Search for the device in TeamViewer API by remotecontrol_id using the devices endpoint
-	$TVDevice = (Invoke-WebRequest -Uri $TVURLDevice -UseBasicParsing -Headers $header).Content | ConvertFrom-Json
-	if($TVDevice.devices.Count -eq 1){ #Check if the API returns 1 match
-    	if($TVDevice.devices.alias -ne $ComputerName){ #Check if names match
-        	$TVURL += ("/" + $TVDevice.devices.device_id)
-        	$TVNewDeviceName = [PSCustomObject]@{
-            	alias = $ComputerName
-        	}
-        	$json_post = $TVNewDeviceName | ConvertTo-Json
-        	#Update device with current ComputerName using TeamViewer API devices endpoint
-        	$Result = Invoke-WebRequest -Uri $TVURL -UseBasicParsing -Method PUT -Headers $header -Body $json_post -ContentType "application/json"
-        	if($Result.StatusCode -eq 204) {
-            	Write-Host "Device renamed."
-        	} else {
-            	Write-Host "Failed to rename device."
-            	Stop-Transcript -ErrorAction SilentlyContinue
-            	Exit 1
-        	}
-    	} else {
-        	Write-Host "Device name is up-to-date."
-    	}
-	} else {
-    	Write-Host "Device not found in TeamViewer."
-	}
+    $TVURLDevice += "r$TeamViewerID"
+    #Search for the device in TeamViewer API by remotecontrol_id using the devices endpoint
+    $TVDevice = (Invoke-WebRequest -Uri $TVURLDevice -UseBasicParsing -Headers $header).Content | ConvertFrom-Json
+    if ($TVDevice.devices.Count -eq 1) { #Check if the API returns 1 match
+        if ($TVDevice.devices.alias -ne $ComputerName) { #Check if names match
+            $TVURL += ("/" + $TVDevice.devices.device_id)
+            $TVNewDeviceName = [PSCustomObject]@{
+                alias = $ComputerName
+            }
+            $json_post = $TVNewDeviceName | ConvertTo-Json
+            #Update device with current ComputerName using TeamViewer API devices endpoint
+            $Result = Invoke-WebRequest -Uri $TVURL -UseBasicParsing -Method PUT -Headers $header -Body $json_post -ContentType "application/json"
+            if ($Result.StatusCode -eq 204) {
+                Write-Host "Device renamed."
+            } else {
+                Write-Host "Failed to rename device."
+                Stop-Transcript -ErrorAction SilentlyContinue
+                Exit 1
+            }
+        } else {
+            Write-Host "Device name is up-to-date."
+        }
+    } else {
+        Write-Host "Device not found in TeamViewer."
+    }
 }
 Stop-Transcript -ErrorAction SilentlyContinue
 Exit 0
