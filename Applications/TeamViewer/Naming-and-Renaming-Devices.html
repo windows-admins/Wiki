@@ -2,7 +2,7 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-11T22:54:45.899Z
+date: 2022-09-11T22:56:38.265Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
@@ -11,7 +11,7 @@ dateCreated: 2022-09-11T22:52:52.692Z
 <p><span class="text-huge"><strong>Set the device alias on install</strong></span></p>
 <p>By default, the TeamViewer Full and Host clients on Windows limit the device's alias to 15 characters during install - this is not a database limitation, since you can manually set aliases beyond 15 characters - and while the macOS clients don't have a character limit for their alias, they use the local hostname, which has a trailing “.local” in the name, but it may include other strings related to the device's ISP domain as well.</p>
 <p>This may cause a disparity in the naming conventions if you use Intune or other tools to manage your devices. Intune, in particular, doesn't have a 15 character limit to name devices on Windows, and for macOS, it uses the Computer Name.</p>
-<p>To work around this behavior on TeamViewer, you can use the “-alias” command line parameter to tell TeamViewer to use a specific custom name for your devices' alias during install - these commands should be used after the TeamViewer clients are installed, and you should usually wait around 30 seconds for them to work properly, so I'm including such wait commands as well:</p>
+<p>To work around this behavior on TeamViewer, you can use the “-alias” command line parameter to tell TeamViewer to use a specific custom name for your devices' alias during install - these commands should be used “immediately” after the TeamViewer clients are installed, and you should usually wait around 30 seconds for them to work properly, so I'm including such wait commands as well:</p>
 <p><span class="text-big"><strong>Windows - Full Client (64-bit)</strong></span></p>
 <pre><code class="language-plaintext">Start-Process ping -Wait -WindowStyle hidden -ArgumentList '-n 30 127.0.0.1'
 Start-Process "C:\Program Files\TeamViewer\TeamViewer.exe" -Wait -WindowStyle hidden -ArgumentList "--alias &lt;Your Custom Computer Name here&gt;"</code></pre>
