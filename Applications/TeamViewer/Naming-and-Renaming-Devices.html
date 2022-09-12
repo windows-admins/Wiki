@@ -2,7 +2,7 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-12T01:03:29.970Z
+date: 2022-09-12T04:27:02.673Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
@@ -29,7 +29,8 @@ Start-Process "C:\Program Files (x86)\TeamViewer\TeamViewer.exe" -Wait -WindowSt
 <p>Since the TeamViewer clients won't update the device's TeamViewer alias automatically after their names are changed locally, you may want a way to automate renaming them, instead of manually doing that directly on TeamViewer.</p>
 <p>To use any of the scripts covered below, if you don't have one already, you'll need to create a new TeamViewer Script API Token with “Computers &amp; Contacts” &gt; “View entries” and “Edit entries” permissions - more info <a href="https://www.teamviewer.com/en-us/for-developers/#create-script-section">here</a>.</p>
 <p><span class="text-big"><strong>Windows</strong></span></p>
-<p>For Windows, you can use an Intune proactive remediation that detects if the device's name is out of sync with its TeamViewer alias, and if so, remediate it by updating the alias in TeamViewer. Alternatively, if proactive remediations are not your thing, you could just use the Remediation Script as an Intune PowerShell Script that runs on your Windows devices regularly:</p>
+<p>For Windows, you can use an Intune proactive remediation that detects if the device's name is out of sync with its TeamViewer alias, and if so, remediate it by updating the alias in TeamViewer. Alternatively, if proactive remediations are not your thing, you could just use the Remediation Script as an Intune PowerShell Script that runs on your Windows devices regularly.</p>
+<p>Note that the scripts assume you are using a 32-bit Host Client and a 64-bit Full Client on 64-bit Windows devices - if you are using the 32-bit versions of both the Host and Full Clients, you could remove the “$TVFull” variable and the second try/catch block that uses it on both scripts, and change the Write-Host message on the first try/catch to reflect that “TeamViewer Host or Client is installed”, but it's not mandatory.</p>
 <p><strong>Detection Script</strong></p>
 <pre><code class="language-plaintext">#Get your TeamViewer Script API token with Computers &amp; Contacts &gt; view entries and edit entries permissions: https://www.teamviewer.com/en-us/for-developers/#create-script-section
 #Enter your TeamViewer Script API token here:
