@@ -2,7 +2,7 @@
 title: Naming and Renaming Devices
 description: How to set a custom alias for devices during install, and rename them subsequently if needed
 published: true
-date: 2022-09-12T04:28:11.689Z
+date: 2022-09-12T04:41:21.564Z
 tags: teamviewer
 editor: ckeditor
 dateCreated: 2022-09-11T22:52:52.692Z
@@ -49,7 +49,7 @@ $ComputerName = ([System.Net.Dns]::GethostName()).ToUpper()
 
 #Customize your log path here
 $logPath = "C:\Temp"
-if (!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
+if (!(test-path $logPath)) { New-Item -ItemType Directory -Force -Path $logPath }
 $logPath += "\TV_Name_Detection.log"
 
 Start-Transcript -Path $logPath -Force -ErrorAction SilentlyContinue
@@ -105,7 +105,7 @@ $ComputerName = ([System.Net.Dns]::GethostName()).ToUpper()
 
 #Customize your log path here
 $logPath = "C:\Temp"
-if (!(test-path $path)) { New-Item -ItemType Directory -Force -Path $logPath }
+if (!(test-path $logPath)) { New-Item -ItemType Directory -Force -Path $logPath }
 $logPath += "\TV_Name_Remediation.log"
 
 Start-Transcript -Path $logPath -Force -ErrorAction SilentlyContinue
