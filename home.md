@@ -22,4 +22,4 @@ WinAdmins is a loosely formed organization – there is currently no official me
 
 ## Contributing
 
-If you would like to contribute, please fork the [GitHub repository](https://github.com/windows-admins/Wiki) and submit a pull request to add a page, and amoderator will review the request. Our Discord server also has a dedicated channel for Wiki-related discussions, please feel free to ask questions in `#wiki-chat`.
+If you would like to contribute, please log in with your Discord account and create a page! You can also fork the [GitHub repository](https://github.com/windows-admins/Wiki) and submit a pull request to add a page, and a moderator will review the request. Our Discord server also has a dedicated channel for Wiki-related discussions, please feel free to ask questions in `#wiki-chat` (currently private, soon to be public).
