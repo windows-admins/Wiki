@@ -2,7 +2,7 @@
 title: Intune Win32 App Testing
 description: 
 published: true
-date: 2022-09-29T03:42:27.025Z
+date: 2022-09-29T03:45:03.146Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -23,8 +23,8 @@ In order to appropriately troubleshoot Intune Win32app issues we must understand
  1. The Computer does an application check on an hourly basis for any new apps that are required or an Application install is triggered from the company portal.
  2. Sidecar (The Intune Management Extension) triggers and downloads the application via Delivery Optimization.
  3. The application is stored and decrypted in the Intune cache in C:\Program Files (x86)\Microsoft Intune Management Extension\Content
- 4. The Intune Management Extension server runs the application installer as a subprocess.
- 5. The Installer waits for the program to finsh, checks the exit code for a reboot condition, then checks to see if the detection rules are met
+ 4. The Intune Management Extension service runs the application installer as a child process.
+ 5. The Installer waits for the program to finish, checks the exit code (although this hardly matters execpt for a reboot condition), then checks to see if the detection rules are met
 
 ## Common issues inherit to the application deployment workflow.
 - The Intune service is 32bit. Any application install by default will run as 32bit. If the application is expecting a 64bit environment and does not switch automatically it can cause the application to fail. If your using a powershell script to create / modify / access uninstall keys it will create the key in `software/WOW6432NODE/microsoft...` instead of `software/microsoft...` This can be solved by calling cmd or powershell in the %systemroot%\sysnative path.
