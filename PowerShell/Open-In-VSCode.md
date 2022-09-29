@@ -2,7 +2,7 @@
 title: Open Files in VSCode from PowerShell
 description: How to open files from the terminal, or PS window in VSCode.
 published: true
-date: 2022-09-29T21:56:47.505Z
+date: 2022-09-29T22:10:23.479Z
 tags: powershell, vscode
 editor: markdown
 dateCreated: 2022-05-14T18:34:10.071Z
@@ -59,7 +59,5 @@ Add myfolder to the workspace open in the last active window (or current window 
 ```powershell
 code -a myfolder
 ```
-
-Add myfolder to the workspace open in the last active window (or current window if run from the VS Code Terminal!)
 
 For full documentation on the command line switches see: https://code.visualstudio.com/docs/editor/command-line
