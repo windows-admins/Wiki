@@ -2,7 +2,7 @@
 title: Intune Win32 App Testing
 description: 
 published: true
-date: 2022-09-29T03:40:10.137Z
+date: 2022-09-29T03:41:47.810Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -12,7 +12,7 @@ dateCreated: 2022-04-15T22:42:22.195Z
 
 A guide to Intune application deployment troubleshooting.
 
-In order to get the most out of this post you must have a precuriory knowledge of
+In order to get the most out of this post you must have a precursory knowledge of
  
  - Creating packages for microsoft intune
    
