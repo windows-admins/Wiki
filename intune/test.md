@@ -2,7 +2,7 @@
 title: Intune Win32 App Testing
 description: 
 published: true
-date: 2022-09-29T03:46:03.170Z
+date: 2022-09-29T03:50:40.347Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -18,7 +18,7 @@ In order to get the most out of this post you must have a precursory knowledge o
    
 
 ## Intune application deployment and it's parts
-In order to appropriately troubleshoot Intune Win32app issues we must understand how to devide and conqure the problem. We need to establish a big picture understanding of how apps are delivered and installed on each machine.
+In order to appropriately troubleshoot Intune Win32app issues we must understand how to devide and conquer the problem. We need to establish a big picture understanding of how apps are delivered and installed on each machine.
 ![win32-delivery-flow.png](/win32-delivery-flow.png)
  1. The Computer does an application check on an hourly basis for any new apps that are required or an Application install is triggered from the company portal.
  2. Sidecar (The Intune Management Extension) triggers and downloads the application via Delivery Optimization.
