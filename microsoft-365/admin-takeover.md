@@ -1,8 +1,8 @@
 ---
-title: Admin Takeover
+title: User Offboarding Admin Takeover
 description: Instructions for administrative takeover of an account, generally as part of an offboarding process.
 published: true
-date: 2022-08-22T20:05:11.538Z
+date: 2022-09-29T22:16:00.512Z
 tags: offboarding
 editor: markdown
 dateCreated: 2022-08-22T19:37:37.794Z
