@@ -2,7 +2,7 @@
 title: Intune Win32 App Testing
 description: 
 published: true
-date: 2022-09-29T03:50:40.347Z
+date: 2022-09-29T03:52:50.626Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -87,7 +87,7 @@ The Key can be found at
 >HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps\{SID}\{App GUID}
 
 There are many ways to get a users SID that I won't cover here. 
-An easy reliable wayis to use[psgetsid](https://learn.microsoft.com/en-us/sysinternals/downloads/psgetsid) from sysinternals.
+An easy reliable way is to use [psgetsid](https://learn.microsoft.com/en-us/sysinternals/downloads/psgetsid) from sysinternals.
 The App GUID can be found in the application's URL in Intune.
 
 the code example below resets the state of ALL app deployments, forcing the IME service to resync everything.
