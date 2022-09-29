@@ -2,7 +2,7 @@
 title: HAADJ vs AAD Join
 description: 
 published: true
-date: 2022-09-29T21:13:58.494Z
+date: 2022-09-29T22:14:38.620Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:17.174Z
@@ -18,14 +18,9 @@ dateCreated: 2022-04-15T22:42:17.174Z
 
 - anything you continue to image for "reasons" in a traditional process should end up hybrid joined
 
-## when you shouldn't use HAADJ
+## When shouldn't you use HAADJ
 
-
-
-- Hybrid Autopilot is actually pretty easy to set up and get working (at least on-perm without VPN), but do you really need to do it? no, you most likely don't. continue to provision old devices using existing processes, and only build new processes for things that will stay around. why waste the time implementing hybrid AP if it will eventually go away, once everything is AADJ?
-
-- 
-
+- Hybrid Autopilot is actually pretty easy to set up and get working (at least on-premises without VPN), but do you really need to do it? No, you most likely don't. Continue to provision old devices using existing processes, and only build new processes for things that will stay around. Why waste the time implementing Hybrid AAD if it will eventually go away, once everything is AADJ?
 
 ## When should you use Azure AD Join?
 
