@@ -1,8 +1,8 @@
 ---
-title: Open Files in VSCode from PowerShell
+title: Open Files / Folders in VSCode from PowerShell
 description: How to open files from the terminal, or PS window in VSCode.
 published: true
-date: 2022-09-29T22:10:23.479Z
+date: 2022-09-29T22:10:32.254Z
 tags: powershell, vscode
 editor: markdown
 dateCreated: 2022-05-14T18:34:10.071Z
