@@ -2,7 +2,7 @@
 title: Intune Win32 App Testing
 description: 
 published: true
-date: 2022-09-29T03:41:47.810Z
+date: 2022-09-29T03:42:27.025Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
