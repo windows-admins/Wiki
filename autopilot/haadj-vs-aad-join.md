@@ -2,7 +2,7 @@
 title: HAADJ vs AAD Join
 description: 
 published: true
-date: 2022-05-14T19:12:09.244Z
+date: 2022-09-29T21:13:58.494Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:17.174Z
@@ -10,7 +10,6 @@ dateCreated: 2022-04-15T22:42:17.174Z
 
 # Which one should you use?
 
-lorem ipsum
 
 ## When should you use HAADJ?
 - haadj is fine for your existing already domain joined devices.
