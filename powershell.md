@@ -2,7 +2,7 @@
 title: PowerShell
 description: Learn more about PowerShell, or help provide some snippets!
 published: true
-date: 2022-09-30T09:30:10.371Z
+date: 2022-09-30T11:33:10.036Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-29T21:39:51.282Z
