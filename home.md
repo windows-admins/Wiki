@@ -2,7 +2,7 @@
 title: Welcome
 description: 
 published: true
-date: 2022-05-28T10:13:24.124Z
+date: 2022-09-30T08:17:09.138Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-09T20:02:02.577Z
@@ -22,4 +22,4 @@ WinAdmins is a loosely formed organization – there is currently no official me
 
 ## Contributing
 
-If you would like to contribute, please log in with your Discord account and create a page! You can also fork the [GitHub repository](https://github.com/windows-admins/Wiki) and submit a pull request to add a page, and a moderator will review the request. Our Discord server also has a dedicated channel for Wiki-related discussions, please feel free to ask questions in `#wiki-chat` (currently private, soon to be public).
+If you would like to contribute, please log in with your Discord account and create a page! You can also fork the [GitHub repository](https://github.com/windows-admins/Wiki) and submit a pull request to add a page, and a moderator will review the request. Our Discord server also has a dedicated channel for Wiki-related discussions, please feel free to ask questions in `#wiki` (currently private, soon to be public).
