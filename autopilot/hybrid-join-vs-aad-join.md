@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: 
 published: true
-date: 2022-09-30T12:27:15.813Z
+date: 2022-09-30T12:47:01.172Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -13,6 +13,8 @@ dateCreated: 2022-09-30T11:20:45.613Z
 * HAADJ is fine for your existing, already domain-joined devices.
 * There's no reason not to enable hybrid join for all existing domain-joined devices.
 * Anything you continue to image for "reasons" in a traditional process should end up hybrid-joined.
+* You need Device based Kerberos Auth can you can't replace it with certificates
+* You have 802.1x infrastructure
 
 ## Why shouldn't you use HAADJ
 
