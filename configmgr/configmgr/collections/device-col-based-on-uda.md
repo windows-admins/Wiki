@@ -2,7 +2,7 @@
 title: Device Collection based on User Device Affinity
 description: How to create a collection based on user device affinity (primary user) and also their AD department attribute
 published: true
-date: 2022-09-30T07:57:20.132Z
+date: 2022-09-30T08:14:16.032Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-30T07:57:20.132Z
