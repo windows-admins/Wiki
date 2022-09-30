@@ -1,5 +1,5 @@
 ---
-title: HAADJ vs AAD Join
+title: Hybrid Join vs AAD Join
 description: 
 published: true
 date: 2022-09-29T22:14:38.620Z
