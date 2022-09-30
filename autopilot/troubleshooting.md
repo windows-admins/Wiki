@@ -2,13 +2,13 @@
 title: Troubleshooting
 description: 
 published: true
-date: 2022-09-30T12:20:00.612Z
+date: 2022-09-30T12:20:08.607Z
 tags: powershell, autopilot, esp
 editor: markdown
 dateCreated: 2022-09-30T11:20:40.828Z
 ---
 
-# Troubleshooting Autopilot
+# Troubleshooting
 
 It's pretty simple, just launch PowerShell, install, and execute the `Get-AutopilotDiagnostics` script.
 
