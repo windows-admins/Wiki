@@ -2,14 +2,14 @@
 title: Copy Output to Clipboard
 description: When you're working in PowerShell, it's sometimes useful to have the ability to send data right to your clipboard
 published: true
-date: 2022-04-20T17:51:27.884Z
+date: 2022-10-05T22:18:34.479Z
 tags: powershell, tips-and-tricks
 editor: markdown
 dateCreated: 2022-04-20T17:51:22.763Z
 ---
 
-# Piping Out Put to your Clipboard
-There are a few different ways to send your PowerShell prompts results to your computers clipboard. You might wonder, "why do I care" well I care because I'm lazy. Here are a few differnet methods you can use to make life just a little bit faster and more precise. 
+# Piping Output to your Clipboard
+There are a few different ways to send your PowerShell prompts results to your computers clipboard. You might wonder, "why do I care" well I care because I'm lazy. Here are a few different methods you can use to make life just a little bit faster and more precise. 
 
 ## The Clip Method
 
