@@ -2,7 +2,7 @@
 title: User Offboarding Admin Takeover
 description: Instructions for administrative takeover of an account, generally as part of an offboarding process.
 published: true
-date: 2022-09-29T22:16:00.512Z
+date: 2022-10-06T08:39:19.513Z
 tags: offboarding
 editor: markdown
 dateCreated: 2022-08-22T19:37:37.794Z
@@ -33,7 +33,7 @@ OneDrive access can be provided to a user by making them a site collection admin
 
 The SharePoint Online Powershell module can be used to add the required permissions as in the example below.
 
-```
+```powershell
 $AdminURL = "https://winadmins-admin.sharepoint.com"
 $OffboardedUserURL = "https://winadmins-my.sharepoint.com/personal/justin_winadmins_io"
 $AddingUser = "someoneelse@winadmins.io"
@@ -68,19 +68,19 @@ Ownership of Power Automate flows can be added via PowerShell using the Microsof
 
 First, get the GUID of the offboarded user:
 
-```
+```powershell
 $OffboardedGUID = (Get-AzureADUser -ObjectId justin@winadmins.io).ObjectId
 ```
 
 Then, get the GUID of the user to be added:
 
-```
+```powershell
 $AddingGUID = (Get-AzureADUser -ObjectId notjustin@winadmins.io).ObjectId
 ```
 
 Then, get all of the offboarded user's flows and add the new owner:
 
-```
+```powershell
 Get-AdminFlow -CreatedBy $OffboardedGUID | Set-AdminFlowOwnerRole -PrincipalType User -PrincipalObjectId $AddingGUID
 ```
 
