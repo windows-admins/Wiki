@@ -1,8 +1,8 @@
 ---
-title: Windows Apps Best Practices
+title: Windows App Best Practices
 description: 
 published: true
-date: 2022-10-08T22:45:57.065Z
+date: 2022-10-08T22:48:02.854Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-16T14:56:13.347Z
@@ -14,8 +14,6 @@ This app type should generally be avoided because:
 - It conflicts with win32 apps during autopilot 
 - Lacks a lot of features that win32 have
 - Doesn't seem to be actively developed anymore
-
-
 
 # Windows app (Win32) 
 This app deployment method is preferred for pretty much all windows apps in Intune.
