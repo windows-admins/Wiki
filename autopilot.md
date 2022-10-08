@@ -2,7 +2,7 @@
 title: Autopilot
 description: 
 published: true
-date: 2022-10-08T22:43:57.813Z
+date: 2022-10-08T22:44:01.433Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T22:41:41.824Z

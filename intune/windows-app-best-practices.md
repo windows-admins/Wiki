@@ -2,7 +2,7 @@
 title: Windows App Best Practices
 description: 
 published: true
-date: 2022-10-08T22:48:02.854Z
+date: 2022-10-08T22:48:15.283Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-16T14:56:13.347Z

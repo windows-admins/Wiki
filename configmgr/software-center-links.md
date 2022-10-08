@@ -2,10 +2,10 @@
 title: Software Center Links
 description: Link directly to Software Center
 published: true
-date: 2022-09-30T08:30:02.238Z
+date: 2022-09-30T11:26:06.105Z
 tags: configmgr, software center
 editor: markdown
-dateCreated: 2022-09-30T08:30:02.234Z
+dateCreated: 2022-09-30T11:21:03.650Z
 ---
 
 # Linking to specific Software Center page

@@ -2,7 +2,7 @@
 title: Applications
 description: 
 published: true
-date: 2022-10-08T22:39:14.482Z
+date: 2022-10-08T22:39:18.151Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T22:39:14.482Z

@@ -2,7 +2,7 @@
 title: Copy Output to Clipboard
 description: When you're working in PowerShell, it's sometimes useful to have the ability to send data right to your clipboard
 published: true
-date: 2022-10-05T22:18:34.479Z
+date: 2022-10-05T22:18:38.205Z
 tags: powershell, tips-and-tricks
 editor: markdown
 dateCreated: 2022-04-20T17:51:22.763Z

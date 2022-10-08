@@ -2,7 +2,7 @@
 title: Licensing
 description: A summary of Microsft 365 licensing
 published: true
-date: 2022-09-30T07:19:37.992Z
+date: 2022-09-30T11:25:45.924Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-30T07:19:37.992Z

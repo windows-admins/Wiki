@@ -2,10 +2,10 @@
 title: Filters
 description: Filters allow easy, more granular control over assignment scope of policies and apps.
 published: true
-date: 2022-07-12T13:56:51.839Z
+date: 2022-10-08T22:44:39.131Z
 tags: intune, policy, apps, filters
 editor: markdown
-dateCreated: 2022-07-12T13:56:48.699Z
+dateCreated: 2022-10-08T22:07:37.945Z
 ---
 
 # Filters
