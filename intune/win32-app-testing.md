@@ -2,7 +2,7 @@
 title: Win32 App Testing
 description: 
 published: true
-date: 2022-10-07T12:22:48.935Z
+date: 2022-10-08T17:39:51.701Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -51,7 +51,7 @@ OR
 
 When deploying an application through Intune it's in your best interest to test an application as close to how Intune will deploy the application as possible. For a user context this means that  unless you plan on calling the sysnative path in intune you should test and run your application from a 32-bit powershell session.
 
-If you're running the app as SYSTEM, there are some extra considerations. You need to test the application from a SYSTEM contest. The system account does not function as a full user account and that can be a problem for many applications. It's also not an account that you can just RunASUser and pop in credientials for. To run an application as SYSTEM you'll need a special program to do so. The most widely accpted and used is [psexec](https://learn.microsoft.com/sysinternals/downloads/psexec) from Microsoft's SysInternals.
+If you're running the app as SYSTEM, there are some extra considerations. You need to test the application from a SYSTEM context. The system account does not function as a full user account and that can be a problem for many applications. It's also not an account that you can just RunASUser and pop in credientials for. To run an application as SYSTEM you'll need a special program to do so. The most widely accepted and used is [psexec](https://learn.microsoft.com/sysinternals/downloads/psexec) from Microsoft's SysInternals.
 
 To create the session you need for application testing launch psexec as an administrator and create an interactive system shell process. (s= system, i = interactive, d = don't show psexec as a seperate window). Examples below:
 
