@@ -2,7 +2,7 @@
 title: Preparing for Autopilot
 description: 
 published: true
-date: 2022-10-08T18:53:47.332Z
+date: 2022-10-08T18:54:22.115Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T18:36:39.937Z
