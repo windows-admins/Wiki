@@ -2,7 +2,7 @@
 title: Preparing for Autopilot
 description: 
 published: true
-date: 2022-10-08T18:37:51.270Z
+date: 2022-10-08T18:40:00.098Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T18:36:39.937Z
@@ -77,8 +77,7 @@ This can be done with OSD/MDT
  [Ben from Intune.Training Intune USB Creator](https://github.com/tabs-not-spaces/Intune.USB.Creator)
  [awlnx WindowsAutopilotPrep](https://github.com/awlnx/WindowsAutopilotPrep)
 
-Although this method is offically supported. It's less preferred. It still can be your best option in many cases but there can be issues with Autopilot profile reassignment down the road and your devices autopilot profile name on the hardware tab will be Autopilot-offlineGUID rather than a nice profile name to target.
-
+Although this method is offically supported. It's less preferred. It still can be your best option in many cases but there can be issues with Autopilot profile reassignment down the road and your devices autopilot profile name on the hardware tab will be Autopilot-offlineGUID rather than a nice profile name to target. This will only register the device for future Autopilot use if your profile has Convert all targeted devices on.
 ### Vendor Registration
 Here is a list of known vendors who,if you purchased your devices through them, can help you import your existing devices.
 
