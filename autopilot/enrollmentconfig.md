@@ -2,7 +2,7 @@
 title: Windows Enrollment
 description: Overview of configuration of general Windows Enrollment options.
 published: true
-date: 2022-10-09T21:58:48.858Z
+date: 2022-10-09T22:00:31.139Z
 tags: intune, windows, enrollment
 editor: markdown
 dateCreated: 2022-10-08T22:07:30.792Z
