@@ -2,7 +2,7 @@
 title: Preparing for Autopilot
 description: 
 published: true
-date: 2022-10-08T18:54:22.115Z
+date: 2022-10-08T22:36:36.010Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T18:36:39.937Z
@@ -60,8 +60,9 @@ To transmit online without Interactive login
 ```powershell
 Get-WIndowsAutopilotInfo -Online -Appid -AppSecret
 ```
-If you do use this method please becareful to limit your apps
-permissions.
+If you do use this method please be careful to limit your apps permissions.
+
+A community tool that provides a wrapper around this command is available from the [OSD Deploy](http://osdeploy.com) project at https://autopilotoobe.osdeploy.com/
 
 ### Gathering from CM
 Someone Please fill In
@@ -78,6 +79,7 @@ This can be done with OSD/MDT
  [awlnx WindowsAutopilotPrep](https://github.com/awlnx/WindowsAutopilotPrep)
 
 Although this method is offically supported. It's less preferred. It still can be your best option in many cases but there can be issues with Autopilot profile reassignment down the road and your devices autopilot profile name on the hardware tab will be Autopilot-offlineGUID rather than a nice profile name to target. This will only register the device for future Autopilot use if your profile has Convert all targeted devices on.
+
 ### Vendor Registration
 Here is a list of known vendors who,if you purchased your devices through them, can help you import your existing devices.
 

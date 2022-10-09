@@ -2,11 +2,10 @@
 title: Applications
 description: 
 published: true
-date: 2022-09-30T11:40:59.971Z
+date: 2022-10-08T22:39:18.151Z
 tags: 
 editor: markdown
-dateCreated: 2022-04-16T14:26:01.550Z
+dateCreated: 2022-10-08T22:39:14.482Z
 ---
 
 # Applications
-Your content here

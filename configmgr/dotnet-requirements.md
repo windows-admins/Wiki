@@ -2,7 +2,7 @@
 title: .NET Requirements
 description: 
 published: true
-date: 2022-09-30T11:28:26.434Z
+date: 2022-09-30T11:28:29.641Z
 tags: configmgr
 editor: markdown
 dateCreated: 2022-04-09T21:23:34.171Z

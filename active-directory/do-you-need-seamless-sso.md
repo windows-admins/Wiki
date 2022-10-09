@@ -2,7 +2,7 @@
 title: Do You Need Seamless SSO?
 description: 
 published: true
-date: 2022-10-07T14:54:40.628Z
+date: 2022-10-07T14:54:44.152Z
 tags: azure ad, sso
 editor: markdown
 dateCreated: 2022-10-06T20:18:03.687Z

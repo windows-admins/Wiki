@@ -2,7 +2,7 @@
 title: Encoding and Decoding Strings
 description: Useful snippets and functions for encoding and decoding strings.
 published: true
-date: 2022-09-29T20:43:30.153Z
+date: 2022-09-30T11:32:11.223Z
 tags: powershell, strings, encoding, decoding, base64, urlencode
 editor: markdown
 dateCreated: 2022-09-29T20:43:30.153Z

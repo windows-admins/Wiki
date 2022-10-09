@@ -1,11 +1,11 @@
 ---
 title: Autopilot
-description:
+description: 
 published: true
-date: 2022-05-14T19:05:38.948Z
-tags:
+date: 2022-10-08T22:44:01.433Z
+tags: 
 editor: markdown
-dateCreated: 2022-04-09T21:16:19.109Z
+dateCreated: 2022-10-08T22:41:41.824Z
 ---
 
 # Autopilot

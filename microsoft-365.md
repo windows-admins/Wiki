@@ -2,11 +2,10 @@
 title: Microsoft 365
 description: 
 published: true
-date: 2022-08-22T20:04:02.940Z
+date: 2022-10-08T22:40:49.915Z
 tags: 
 editor: markdown
-dateCreated: 2022-08-22T20:04:00.492Z
+dateCreated: 2022-10-08T22:40:46.418Z
 ---
 
-# Header
-Your content here
+# Microsoft 365
