@@ -2,10 +2,10 @@
 title: Microsoft 365 Apps admin center
 description: Deploy, manage, monitor and secure Microsoft 365 apps within your organization.
 published: true
-date: 2022-10-08T07:19:37.992Z
+date: 2022-10-10T20:33:03.695Z
 tags: 
 editor: markdown
-dateCreated: 2022-10-08T07:19:37.992Z
+dateCreated: 2022-10-10T20:17:14.854Z
 ---
 
 # Introduction - https://config.office.com
@@ -79,7 +79,7 @@ On config.office.com you can grab your Tenant Association Key from the Setup bla
 
 ![OneDrive Sync Health](OneDriveSyncHealth.png)
 
-Since we are heading in the direction of ensuring all our users make use of OneDrive, this is, in my view, an essential configuration option to give you more visibility of your org's configuration status and health
+Since we are heading in the direction of ensuring all our users make use of OneDrive, this is, in my view, an essential configuration option to give you more visibility of your org's configuration status and health.
 
 ## Further learning
 * [Microsoft Mechanics: Office and Microsoft 365 Apps Deployment & Update Management 2022
