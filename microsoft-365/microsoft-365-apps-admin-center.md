@@ -9,12 +9,12 @@ dateCreated: 2022-10-08T07:19:37.992Z
 ---
 
 # Introduction - https://config.office.com
-Create Microsoft Office installation configuration files to use with the [Office Deployment Tool](https://www.microsoft.com/en-gb/download/details.aspx?id=49117), view OneDrive service health, and define user and update preferences for your Office 365 Apps for Business or Enterprise deployments.
+Create Microsoft Office installation configuration files to use with the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117), view OneDrive service health, and define user and update preferences for your Office 365 Apps for Business or Enterprise deployments.
 
 ## Office 365 Apps
 
 ### Creating configuration XML files
-When you use the [Office Deployment Tool](https://www.microsoft.com/en-gb/download/details.aspx?id=49117), you must specify a configuration file in XML format which details your selected Microsoft Office apps, version, and other settings for deployment.
+When you use the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117), you must specify a configuration file in XML format which details your selected Microsoft Office apps, version, and other settings for deployment.
 
 Your command to use the tool might look like this:
 
@@ -84,4 +84,4 @@ Since we are heading in the direction of ensuring all our users make use of OneD
 ## Further learning
 * [Microsoft Mechanics: Office and Microsoft 365 Apps Deployment & Update Management 2022
 ](https://youtu.be/hP9VWX8cI3Q)
-* [Microsoft Docs](https://learn.microsoft.com/en-gb/deployoffice/deployment-guide-microsoft-365-apps)
+* [Microsoft Docs](https://learn.microsoft.com/deployoffice/deployment-guide-microsoft-365-apps)
