@@ -1,8 +1,8 @@
 ---
 title: Hybrid Join vs AAD Join
-description: The struggle of staying on-prem because it's "safe vs. breaking your tech-debt shackles and moving to modern management.
+description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2022-10-11T20:19:53.328Z
+date: 2022-10-11T20:22:15.315Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
