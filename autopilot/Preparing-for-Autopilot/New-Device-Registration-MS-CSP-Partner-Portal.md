@@ -2,7 +2,7 @@
 title: New-Device-Registration-MS-CSP-Partner-Portal
 description: How to import new devices in preparation for autopilot provisioning
 published: true
-date: 2022-10-13T21:09:00.432Z
+date: 2022-10-13T21:09:52.764Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-13T20:02:43.812Z
@@ -16,7 +16,7 @@ Summary of steps from the Microsoft CSP Partner side (plain Text no screenshots)
 1-	login to Ingram or TD SYNNEX
 2-	collect the Service Tag, Manufacturer, Model from the hardware PO 
 3-	login to MS Partner Center
-4-	search and find the target tenant
+4-	search and find the target tenant/customer
 5-	click on Devices
 6-	select Add Devices 
 7-	select Auto Pilot Devices from the “Select or enter a name for this batch of devices”
