@@ -2,7 +2,7 @@
 title: New-Device-Registration-MS-CSP-Partner-Portal
 description: How to import new devices in preparation for autopilot provisioning
 published: true
-date: 2022-10-13T20:06:04.464Z
+date: 2022-10-13T20:07:15.464Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-13T20:02:43.812Z
@@ -39,7 +39,7 @@ a.	**At this step MS will verify the Device against a real database**
 IT/Partner can find the device in three portals:
 1-	AFTER IT/Partner adds it in the MS partner center
 a.	Auto pilot portal
-2-	AFTER the user or the admin logs in to the device at the “Welcome to FGC Health” screen in OOBE
+2-	AFTER the user or the admin logs in to the device at the “Welcome to tenant name” screen in OOBE
 a.	Azure AD devices portal (join)
 b.	Intune devices portal (enrollment)
 User instructions:
