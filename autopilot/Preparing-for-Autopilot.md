@@ -2,7 +2,7 @@
 title: Preparing for Autopilot
 description: 
 published: true
-date: 2022-10-13T19:52:44.652Z
+date: 2022-10-13T20:03:13.872Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T18:36:39.937Z
@@ -28,7 +28,7 @@ Below is a list of vendors with expected pricing and difficulty with registratio
  Data Center Warehouse | Easy |$0-10
  GHA-Associates | difficult - Rep didn't understand the process| Unknown
  CDW |Easy? | $25
- Microsoft CSP Partner Portal
+ Microsoft CSP Partner Portal - more details https://wiki.winadmins.io/en/autopilot/Preparing-for-Autopilot/New-Device-Registration-MS-CSP-Partner-Portal
  
  ----
 ## Existing device registration
