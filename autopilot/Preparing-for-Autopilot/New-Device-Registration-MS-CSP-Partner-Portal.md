@@ -2,7 +2,7 @@
 title: New-Device-Registration-MS-CSP-Partner-Portal
 description: How to import new devices in preparation for autopilot provisioning
 published: true
-date: 2022-10-13T20:07:15.464Z
+date: 2022-10-13T21:09:00.432Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-13T20:02:43.812Z
@@ -15,26 +15,25 @@ Note: you can not use this method to autopilot Virtual Machines (only real devic
 Summary of steps from the Microsoft CSP Partner side (plain Text no screenshots)
 1-	login to Ingram or TD SYNNEX
 2-	collect the Service Tag, Manufacturer, Model from the hardware PO 
-3-	create the assets in Fresh Service (Service Tag, Manufacturer, Model)
-4-	login to MS Partner Center
-5-	search and find the target tenant
-6-	click on Devices
-7-	select Add Devices 
-8-	select Auto Pilot Devices from the “Select or enter a name for this batch of devices”
-9-	copy the CSV template to your machine (CTRL +C > CTRL +V)
-10-	clean up the CSV template
-11-	populate the CSV file with 3 pieces of information (Service Tag, Manufacturer, Model)
+3-	login to MS Partner Center
+4-	search and find the target tenant
+5-	click on Devices
+6-	select Add Devices 
+7-	select Auto Pilot Devices from the “Select or enter a name for this batch of devices”
+8-	copy the CSV template to your machine (CTRL +C > CTRL +V)
+9-	clean up the CSV template
+10-	populate the CSV file with 3 pieces of information (Service Tag, Manufacturer, Model)
 -	Manufacturer: Dell Inc.
 -	Service Tag is also the Serial number
-12-	upload the populated CSV file to partner Center
+11-	upload the populated CSV file to partner Center
 a.	**At this step MS will verify the Device against a real database**
-13-	Go back to Devices
-14-	assign a profile to the new uploaded devices
-15- Wait and be patient
-16- unbox one of the machines for testing
-17- connect to Wi-Fi
-18- it will automatically reboot
-19- it will say welcome to "Tenant name"
+12-	Go back to Devices
+13-	assign a profile to the new uploaded devices
+14- Wait and be patient
+15- unbox one of the machines for testing
+16- connect to Wi-Fi
+17- it will automatically reboot
+18- it will say welcome to "Tenant name"
  
 IT/Partner can find the device in three portals:
 1-	AFTER IT/Partner adds it in the MS partner center
