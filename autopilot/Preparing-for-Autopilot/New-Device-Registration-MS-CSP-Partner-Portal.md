@@ -2,7 +2,7 @@
 title: New-Device-Registration-MS-CSP-Partner-Portal
 description: How to import new devices in preparation for autopilot provisioning
 published: true
-date: 2022-10-13T20:05:20.112Z
+date: 2022-10-13T20:06:04.464Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-13T20:02:43.812Z
@@ -26,16 +26,15 @@ Summary of steps from the Microsoft CSP Partner side (plain Text no screenshots)
 11-	populate the CSV file with 3 pieces of information (Service Tag, Manufacturer, Model)
 -	Manufacturer: Dell Inc.
 -	Service Tag is also the Serial number
-12-	copy the CSV file back to the AVD downloads folder
-13-	upload the populated CSV file to partner Center
+12-	upload the populated CSV file to partner Center
 a.	**At this step MS will verify the Device against a real database**
-14-	Go back to Devices
-15-	assign a profile to the new uploaded devices
-16- Wait and be patient
-17- unbox one of the machines for testing
-18- connect to Wi-Fi
-19- it will automatically reboot
-20- it will say welcome to "Tenant name"
+13-	Go back to Devices
+14-	assign a profile to the new uploaded devices
+15- Wait and be patient
+16- unbox one of the machines for testing
+17- connect to Wi-Fi
+18- it will automatically reboot
+19- it will say welcome to "Tenant name"
  
 IT/Partner can find the device in three portals:
 1-	AFTER IT/Partner adds it in the MS partner center
