@@ -2,7 +2,7 @@
 title: Deploying Store Apps During ESP
 description: 
 published: true
-date: 2022-10-06T01:09:45.552Z
+date: 2022-10-13T21:50:33.607Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-27T23:53:49.294Z
@@ -40,4 +40,9 @@ In the Microsoft Store for Business
 
 Once the app is synced to Intune, you can assign it to your Autopilot device groups.
 
+When you assign the offline app don't forget to change the license type to device
+
+![licensetype.jpg](/licensetype.jpg)
+
 https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app
+
