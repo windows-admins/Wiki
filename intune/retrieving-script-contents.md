@@ -2,13 +2,13 @@
 title: Retrieving Script Contents
 description: 
 published: true
-date: 2022-10-21T15:44:43.031Z
+date: 2022-10-21T15:46:03.773Z
 tags: base64, intune, win32, scripts
 editor: markdown
 dateCreated: 2022-10-21T14:46:26.209Z
 ---
 
-# Retrieving sscript contents from intune
+# Retrieving script contents from intune
 
 ## win32 requirements script
 
