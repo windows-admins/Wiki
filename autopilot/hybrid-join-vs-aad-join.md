@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2022-10-11T20:22:15.315Z
+date: 2022-10-25T14:06:56.198Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -18,13 +18,17 @@ The word "Hybrid" is often used interchangably within discussions around AD/AAD/
 ### **Hybrid Identity**
 
 Hybrid Identity is the technology that underpins almost all of the infrastructure to support an On-Premise + Microsoft Cloud environment. It is 100% required if running in this scenario and is not in question.
- With the use and configuration of AAD Connect, an on-premise account and its authentication method is synced to Azure AD. This can extend on-premise accounts into the cloud and enable single-sign on capability across cloud services.
-More Info: [What is hybrid identity with Azure Active Directory? - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/whatis-hybrid-identity)
-  
-### **Hybrid Azure AD Join (HAADJ)**
-Hybrid AD Join is the actual technology being discussed below:
 
-<br>
+With the use and configuration of AAD Connect, an on-premise account and its authentication method is synced to Azure AD. This can extend on-premise accounts into the cloud and enable single-sign on capability across cloud services.
+
+More Info:
+
+* [What is hybrid identity with Azure Active Directory? - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
+* https://aka.ms/goaadj
+
+### **Hybrid Azure AD Join (HAADJ)**
+
+Hybrid AD Join is the actual technology being discussed below:
 
 ## Common HAADJ Misconceptions
 
@@ -55,17 +59,12 @@ Consider publishing internal web apps through [Azure AD Application Proxy](https
 > This is a valid reason to require HAADJ as it requires device authentication, however to take a cloud-first mindset, you should investigate ways to transition away from using this, such as utilising user or certificate-based auth, or removing the requirement entirely.
 {.is-success}
 
-
 **5:**
 > Devices are only secure if they're domain joined!
 
 > This is incredibly outdated thinking and your infrastructure is likely weak in other areas, which may lead to a serious breach. 
 Begin to review guidance on [Zero Trust identity and device access](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/microsoft-365-policies-configurations) concepts and pivot thinking around security and risk. 
 {.is-danger}
-
-<br>
-
----
 
 ## When should you use HAADJ?
 
@@ -88,12 +87,10 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 * Any user assigned device deployed via Autopilot should be user-driven Azure AD-only 99% of the time.
 
 ## How do I migrate from HAADJ to AADJ?
+
 There is **no migration path** from HAADJ Devices to AADJ Devices that doesn't potentially compromise the device in a way that could cause significant issues in the future and be almost impossible to diagnose. The device should be wiped/reset and brought into AADJ via Autopilot either via attrition (user leaver/joiner process) or defined projects to bring devices into Modern Management.
+
 There is **no pressure** to do this within a defined timescale. Your existing on-premise infrastructure will continue to manage those devices.
-
-<br>
-
----
 
 ## External Links
 
