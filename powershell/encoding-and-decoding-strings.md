@@ -2,7 +2,7 @@
 title: Encoding and Decoding Strings
 description: Useful snippets and functions for encoding and decoding strings.
 published: true
-date: 2022-09-30T11:32:11.223Z
+date: 2022-11-18T23:25:35.152Z
 tags: powershell, strings, encoding, decoding, base64, urlencode
 editor: markdown
 dateCreated: 2022-09-29T20:43:30.153Z
@@ -41,7 +41,7 @@ ConvertFrom-Base64String -InputString 'V2luQWRtaW5zLmlv' -Encoding ([System.Text
 These two functions handle URL encoding/decoding a string.
 
 ```powershell
-function ConvertFrom-URLEncodedString ([String]$InputString, [System.Text.Encoding]$Encoding) {
+function ConvertFrom-URLEncodedString ([String]$InputString) {
     $DecodedString = [System.Web.HttpUtility]::UrlDecode($InputString)
     $DecodedString
 }
