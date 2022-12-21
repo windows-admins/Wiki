@@ -2,7 +2,7 @@
 title: Corso
 description: An open-source backup tool for Microsoft 365 applications
 published: true
-date: 2022-12-21T23:41:33.827Z
+date: 2022-12-21T23:46:17.262Z
 tags: m365apps outlook
 editor: markdown
 dateCreated: 2022-12-21T23:41:33.827Z
