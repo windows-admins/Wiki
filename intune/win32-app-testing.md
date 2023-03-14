@@ -2,7 +2,7 @@
 title: Win32 App Testing
 description: 
 published: true
-date: 2022-10-08T17:39:57.142Z
+date: 2023-03-14T13:44:19.391Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-15T22:42:22.195Z
@@ -90,7 +90,7 @@ After your have validated your package in the same context as Intune, checking t
 
 When testing Win32 app deployments in Intune, the IME only tries 3 times per 24 hours, when testing this quickly becomes very tedious.
 
-You can Reset the "Global Re-evaluation Scheme" by removing the application from the IME's registry.
+You can Reset the "Global Re-evaluation Scheme" by removing the application from the IME's registry and restarting the IME service.
 
 > This should be done with some caution as you're removing the known state of the application from Sidecar.
 {.is-warning}
