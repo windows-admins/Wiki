@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2023-03-31T14:54:12.491Z
+date: 2023-03-31T15:10:46.005Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -66,3 +66,34 @@ CloudTrustDisplay  : Microsoft.AzureAD.Kdc.Service.TrustDisplay
 
 ## Configuring Cloud Kerberos Trust Settings
 
+MS Docs: https://learn.microsoft.com/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy
+
+Cloud Kerberos Trust can be enabled via GPO, or via a Configuration Profile in Intune. If using Intune, this setting is now in the Settings Catalog, so there is no longer a need to use a custom OMA-URI setting.
+
+### Intune
+
+1. Create a new Configuration Profile, selecting "Windows 10 and later", and "Settings catalog"
+2. Give it a name, such as "Cloud Kerberos Trust", and click Next
+3. Click "Add Settings", and search for "Cloud Trust"
+4. Select the setting to add it to your profile and enable it:
+
+![cloud-trust-01.png](/cloud-trust-01.png)
+
+5. Continue clicking Next and configure Scope Tags and Assignments as desired, and click Create
+
+### GPO
+
+> Ensure your ADMX templates are up to date if you cannot find the specified setting
+{.is-info}
+
+1. Create a new GPO, or edit an existing one
+2. Browse to Computer Configuration -> Administrative Templates -> Windows Components -> Windows Hello for Business
+3. Configure "Use cloud trust for on-premises authentication"
+
+![cloud-trust-02.png](/cloud-trust-02.png)
+
+4. Save the GPO, and link it to the appropriate OU(s)
+
+## Validating Functionality
+
+soon...
