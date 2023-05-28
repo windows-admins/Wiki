@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2023-05-28T20:04:06.527Z
+date: 2023-05-28T20:18:30.492Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -10,7 +10,7 @@ dateCreated: 2023-03-31T14:54:12.491Z
 
 # Windows Hello for Business - Cloud Kerberos Trust
 
-In order to access on-premises resources with a hybrid (i.e. synced) identity on a Hybrid or Azure AD joined endpoint utilizing Windows Hello for Business, Cloud Kerberos Trust needs to be deployed. Previously, there were two other options to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
+In order to access on-premises resources (such as file shares), with a hybrid (i.e. AAD synced) identity, on a Hybrid AD or Azure AD joined endpoint utilizing Windows Hello for Business, Cloud Kerberos Trust needs to be deployed. Previously, there were two other options to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
 
 Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisiting technology that enabled SSO via FIDO2, Azure AD Kerberos.
 
@@ -21,8 +21,8 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 3. User accounts expected to use WHfB synced to Azure AD
 > WARNING: AD accounts that are a member of sensitive, highly privileged groups such as Domain Admins, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Azure AD Kerberos functions as a "virtual" RODC, and these accounts cannot auth against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
 {.is-danger}
-4. Azure AD Kerberos in place
-5. Cloud Kerberos Trust settings in place (eith via GPO or Intune Settings Catalog configuration profile)
+4. Azure AD Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to AAD and expected to utilize WHfB.
+5. Cloud Kerberos Trust settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
 
 ## Enabling Azure AD Kerberos
 
