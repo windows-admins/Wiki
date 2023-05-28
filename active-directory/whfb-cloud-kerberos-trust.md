@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2023-05-28T20:02:08.942Z
+date: 2023-05-28T20:04:06.527Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -19,7 +19,7 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 1. Windows 10 21H2 or later
 2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2019+ already?)
 3. User accounts expected to use WHfB synced to Azure AD
-> WARNING: AD accounts that are a member of sensitive, highly privlidged groups such as Domain Admins, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Azure AD Kerberos functions as a "virtual" RODC, and these accounts cannot auth against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
+> WARNING: AD accounts that are a member of sensitive, highly privileged groups such as Domain Admins, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Azure AD Kerberos functions as a "virtual" RODC, and these accounts cannot auth against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
 {.is-danger}
 4. Azure AD Kerberos in place
 5. Cloud Kerberos Trust settings in place (eith via GPO or Intune Settings Catalog configuration profile)
