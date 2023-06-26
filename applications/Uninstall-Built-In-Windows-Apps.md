@@ -2,7 +2,7 @@
 title: Uninstall Built-In Windows Apps
 description: This article will explain how to officially remove built-in apps from Windows 10 and up.
 published: false
-date: 2023-06-26T20:28:22.409Z
+date: 2023-06-26T20:50:48.180Z
 tags: intune, windows, store
 editor: markdown
 dateCreated: 2023-06-14T20:33:27.072Z
@@ -27,7 +27,7 @@ To do this, you must first find out the AppID or name of the application you wan
 
 ### Method 1 - Use the App Installer (aka Winget)
 *Winget* should be automatically available on Windows for this purpose. You can easily search for an application by doing `winget search "APPNAME"`. Here's an example of what this looks like.
-![2023-06-26_21-19-34.png](/2023-06-26_21-19-34.png)
+![winget-example.png](/winget-example.png)
 From this, you copy the ID and continue with the next step.
 ### Method 2 - Use the store app
 The *Microsoft Store* App provides similar functionality. Using the store provides the ability to search for the app in the OS display language. For example 'Company Portal' becomes "Unternehmensportal" using a de-DE language.
@@ -41,9 +41,7 @@ To remove a store app using Intune, you just need to add a new application (see 
 > Remember to select the install behaviour that matches the installation type for that application. System will uninstall the application for everyone using the target device. User will only uninstall it for a targeted user. **This selection can only be changed when the application is added. **
 {.is-info}
 
-## Addtional Considerations
-The following should be considered as-is, meaning they quickly change and might be inaccurate.
+## Additional Considerations
+The following should be considered as-is, which means it is subject to change and may be inaccurate.
 ### Removing built-in apps through other means
-Over the years a lot of scripts have been released - even updated to this day, that claim to somehow debloat the operating system. Some of the built-in applications will not be available through either of these methods. ***This is intentional and it might cause problems later on.***
-
-Especially removing apps like the store app itself is a very bad idea as it will completely break an admins control of applications through Intune. 
+Over the years a lot of scripts have been released - even updated to this day, that claim to debloat the operating system. Some of the built-in applications will not be available through either of these methods. ***This is intentional and removing them might cause problems later on.***
