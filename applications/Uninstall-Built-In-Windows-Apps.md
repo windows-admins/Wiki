@@ -2,7 +2,7 @@
 title: Uninstall Built-In Windows Apps
 description: This article will explain how to officially remove built-in apps from Windows 10 and up.
 published: false
-date: 2023-06-26T19:52:03.804Z
+date: 2023-06-26T20:14:01.097Z
 tags: intune, windows, store
 editor: markdown
 dateCreated: 2023-06-14T20:33:27.072Z
@@ -11,7 +11,19 @@ dateCreated: 2023-06-14T20:33:27.072Z
 # How to uninstall built-in Windows apps
 The only official way to remove built-in Windows apps is using the "Uninstall" assignment with Microsoft Intune. 
 ## Find the apps you want to remove
-To do this, you first need to figure out the AppID or Name of the application you want to remove. Both methods can be run without being an administrator on the target machine.
+To do this, you must first find out the AppID or name of the application you want to remove. Both of the following methods can be performed without being an administrator on the target computer. In both cases, be aware of the following limitations. Some of these limitations can be worked around by using the methods below.
+
+> Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
+{.is-warning}
+> - The app is not available in your region
+> - The app is not available if there is an age restriction
+> - The app is a paid app, which is not supported
+> - The app is an Android app
+> - The app is a Microsoft Store for Business app that is not available publicly in the consumer store
+> 
+> Source:  https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft#add-and-deploy-a-microsoft-store-app
+{.is-warning}
+
 
 ### Method 1 - Use the App Installer (aka Winget)
 *Winget* should be automatically available on Windows for this purpose. You can easily search for an application by doing `winget search "APPNAME"`. Here's an example of what this looks like.
@@ -24,4 +36,7 @@ Once you found the app you're looking for, use the 'share' funtionality and sele
 The URL for the Company Portal is "https://www.microsoft.com/store/productId/9WZDNCRFJ3PZ" so the ID would be ***9WZDNCRFJ3PZ***
 ![microsoftstore-sharelink.png](/microsoftstore-sharelink.png)
 ## Remove the app using Intune
-To remove a store app using Intune, you just need to add a new application 
+To remove a store app using Intune, you just need to add a new application (see https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft#add-and-deploy-a-microsoft-store-app) and assign it as uninstall to a group in your desired scope.
+
+## Considerations
+1. Adding an app to your 
