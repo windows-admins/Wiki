@@ -1,8 +1,8 @@
 ---
 title: Uninstall Built-In Windows Apps
 description: This article will explain how to officially remove built-in apps from Windows 10 and up.
-published: false
-date: 2023-06-26T20:56:33.451Z
+published: true
+date: 2023-06-26T21:02:19.139Z
 tags: intune, windows, store
 editor: markdown
 dateCreated: 2023-06-14T20:33:27.072Z
@@ -33,14 +33,14 @@ From this, you copy the ID and continue with the next step.
 ### Method 2 - Use the store app
 The *Microsoft Store* App provides similar functionality. Using the store provides the ability to search for the app in the OS display language. For example 'Company Portal' becomes "Unternehmensportal" using a de-DE language.
 
-Once you found the app you're looking for, use the 'share' funtionality and select "copy link". The ID you need is in the URL, that is now in your clipboard. 
+Once you found the app you're looking for, use the 'share' functionality  and select "copy link". The ID you need is in the URL, that is now in your clipboard. 
 The URL for the Company Portal is "https://www.microsoft.com/store/productId/9WZDNCRFJ3PZ" so the ID would be ***9WZDNCRFJ3PZ***
 ![microsoftstore-sharelink.png](/microsoftstore-sharelink.png)
 
 ## Remove the app using Intune
 To remove a store app using Intune, you just need to add a new application (see https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft#add-and-deploy-a-microsoft-store-app) and assign it as uninstall to a group in your desired scope (device/user).
 
-> Remember to select the install behaviour that matches the installation type for that application. System will uninstall the application for everyone using the target device. User will only uninstall it for a targeted user. **This selection can only be changed when the application is added.**
+> Remember to select the install behavior that matches the installation type for that application. System will uninstall the application for everyone using the target device. User will only uninstall it for a targeted user. **This selection can only be changed when the application is added.**
 {.is-info}
 
 ## Additional Considerations
