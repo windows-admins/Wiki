@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2022-10-25T14:06:56.198Z
+date: 2023-07-10T17:40:35.043Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -96,3 +96,4 @@ There is **no pressure** to do this within a defined timescale. Your existing on
 
 * [Cloud native Windows endpoints | Microsoft Learn](https://learn.microsoft.com/en-gb/mem/cloud-native-endpoints-overview)
 * [To AAD Join or Not … That is the Question](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/to-aad-join-or-not-that-is-the-question/ba-p/3435768)
+* [HAADJ: Stop it, you're making it worse for yourself (mostly)](https://skiptotheendpoint.co.uk/haadj-stop-it-youre-making-it-worse-for-yourself-mostly/)
