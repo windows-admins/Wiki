@@ -2,13 +2,18 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2023-07-10T17:40:35.043Z
+date: 2023-07-17T22:08:48.743Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
 ---
 
 # Hybrid Join vs AAD Join
+
+> Note: This page still utilises terminology which is due to be updated with the recent announcement:
+[Azure AD is Becoming Microsoft Entra ID - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436)
+{.is-info}
+
 
 This question is asked more than any other in the community, and this page aims to cover some common myths/misconceptions around the main reasons many people believe they need to continue to be Hybrid Joined.
 
@@ -24,7 +29,6 @@ With the use and configuration of AAD Connect, an on-premise account and its aut
 More Info:
 
 * [What is hybrid identity with Azure Active Directory? - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
-* https://aka.ms/goaadj
 
 ### **Hybrid Azure AD Join (HAADJ)**
 
@@ -68,20 +72,20 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 
 ## When should you use HAADJ?
 
-* HAADJ is fine for your existing, already domain-joined devices.
-* There's no reason not to enable hybrid join for all existing domain-joined devices.
+* HAADJ is absolutely fine for your existing, already domain-joined devices.
+* There's **no** reason not to enable hybrid join for all existing domain-joined devices.
 * You want to continue to use Group Policy to manage devices.
 * Anything you continue to image for "reasons" in a traditional process should end up hybrid-joined.
 * You need device-based Kerberos auth and you can't replace it with certificates.
 * You have 802.1x infrastructure relying on computer objects in AD.
 
-## Why shouldn't you use HAADJ
+## Why *shouldn't* you use HAADJ
 
 * Hybrid Autopilot is actually pretty easy to set up and get working (at least on-premises without VPN), but do you really need to do it? No, you most likely don't.
 * Continue to provision old devices using existing processes, and only build new processes for things that will stay around.
 * Why waste the time implementing Hybrid AAD if it will eventually go away, once everything is AADJ?
 
-## When should you use Azure AD Join?
+## Why *should* you use Azure AD Join?
 
 * Azure AD join is the preferred choice going forward
 * Any user assigned device deployed via Autopilot should be user-driven Azure AD-only 99% of the time.
