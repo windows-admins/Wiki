@@ -2,7 +2,7 @@
 title: Bitlocker
 description: 
 published: true
-date: 2023-07-27T15:23:45.468Z
+date: 2023-07-27T15:25:54.713Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-26T14:39:27.350Z
@@ -17,11 +17,17 @@ While bitlocker can be configured in various ways, for simplicities sake we will
 {.is-info}
 
 
+
+you can find the policy by navigating to the following location:
+
 endpoint security -> disk encryption -> create policy
 
-the policy will present you with two sections, bitlocker and administrative templates
+
+
 
 # Configuring the policy
+
+the policy will present you with two sections, bitlocker and administrative templates
 
 ## Bitlocker
 
@@ -58,9 +64,6 @@ Choose how BitLocker-protected operating system drives can be recovered: **Enabl
 - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
 - Save BitLocker recovery information to AD DS for operating system drives: **True**
 - Configure user storage of BitLocker recovery information: **Allow 48-digit recovery password**
-- 
-- 
-
 
 
 
