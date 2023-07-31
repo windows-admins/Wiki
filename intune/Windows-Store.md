@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-07-31T12:09:12.312Z
+date: 2023-07-31T12:58:36.273Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -47,4 +47,5 @@ This not only turns off apps, it also prevents those apps from receiving store u
 ### "Turn off access to the Store"
 This setting, as Rudy points out here https://call4cloud.nl/2020/06/managing-apps-in-the-microsoft-store/#part1, does not disable access to the store, but rather the option to point to the store for unknown file types. It does not prevent "open with", you have to configure https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-icm#shellnousestoreopenwith_1 for that additionally.
 ### "Turn off access to all Windows Update features"
+https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-icm#removewindowsupdate_icm
 While this setting does not prevent Store applications from updating, it does prevent the user from adding optional features (including language packs) and from searching for updates online.
