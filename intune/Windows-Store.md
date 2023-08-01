@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-07-31T12:58:36.273Z
+date: 2023-08-01T20:19:27.912Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -19,18 +19,15 @@ This setting can be applied to the user or to a device:
 - If scoped to a device, **all users** on that device cannot access the store.
 
 ![microsoftstoreisblocked.png](/microsoftstoreisblocked.png)
-
 ## Automatic Windows Store app updates
 Unless you have very specific requirements (see https://learn.microsoft.com/en-us/microsoft-store/distribute-offline-apps#why-offline-licensed-apps), you should not configure the following settings because they will prevent automatic Store updates. As of May 2023, the only automatic offline update feature available through Microsoft using Configuration Manager is **disabled**, after being deprecated since November 2021 (see https://learn.microsoft.com/en-us/mem/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business). In other words, updates to built-in applications will only be done online (automatically) or using Winget (via scripts).
 
 > While there are other settings like "Turn off Automatic Download of updates on Win8 machines", only settings that apply to supported Windows 10 an higher will be discussed here. You shouldn't configure settings that don't apply to your operating system, as this could have unintended consequences.
 {.is-info}
-
 ### Consequences of not updating built-in apps
 - Security issues are not resolved
 - Upgrades to newer versions of the operating system may cause applications to stop working (calculator, photos, sticky notes...)
 - Documented features may be missing from applications, resulting in a poorer user experience
-
 ### "Turn off the Store application"
 https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1 Both, the user and the device setting have a note that reads: 
 **"If you enable this setting, access to the Store application is denied. Access to the Store is required for installing app updates."**
@@ -39,7 +36,6 @@ https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-appli
 Does what it says: Control the automatic update of Store applications.
 > If you don't set this preference and users have access to the store, they can disable it. See https://support.microsoft.com/en-us/windows/turn-on-automatic-app-updates-70634d32-4657-dc76-632b-66048978e51b
 {.is-warning}
-
 ### "Disable all apps from Microsoft Store"
 https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps 
 This not only turns off apps, it also prevents those apps from receiving store updates. As a reminder, depending on your scenario, you may still need to update these apps for security reasons.
@@ -49,3 +45,6 @@ This setting, as Rudy points out here https://call4cloud.nl/2020/06/managing-app
 ### "Turn off access to all Windows Update features"
 https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-icm#removewindowsupdate_icm
 While this setting does not prevent Store applications from updating, it does prevent the user from adding optional features (including language packs) and from searching for updates online.
+## Persistence of apps through wipe
+If "System" was selected as installation context for UWP apps through the Microsoft Store (new) method, they will be added to provisioned packages of the OS. This means, that applications installed this way will withstand a wipe (with no options selected).
+![uwpaddedtoprovisionedpackage.png](/uwpaddedtoprovisionedpackage.png)
