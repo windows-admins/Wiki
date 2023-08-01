@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-08-01T20:19:27.912Z
+date: 2023-08-01T21:30:04.243Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -46,5 +46,5 @@ This setting, as Rudy points out here https://call4cloud.nl/2020/06/managing-app
 https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-icm#removewindowsupdate_icm
 While this setting does not prevent Store applications from updating, it does prevent the user from adding optional features (including language packs) and from searching for updates online.
 ## Persistence of apps through wipe
-If "System" was selected as installation context for UWP apps through the Microsoft Store (new) method, they will be added to provisioned packages of the OS. This means, that applications installed this way will withstand a wipe (with no options selected).
+If "System" was selected as installation context for UWP apps through the Microsoft Store (new) method, they will be added to provisioned packages of the OS. This means, that applications installed this way will withstand a wipe (with no options selected), a fresh start and Autopilot Reset.
 ![uwpaddedtoprovisionedpackage.png](/uwpaddedtoprovisionedpackage.png)
