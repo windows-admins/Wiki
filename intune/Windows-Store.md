@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-08-11T22:12:03.877Z
+date: 2023-08-11T22:13:39.378Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -23,7 +23,7 @@ This setting can be applied to the user or to a device:
 Unless you have very specific requirements (see https://learn.microsoft.com/en-us/microsoft-store/distribute-offline-apps#why-offline-licensed-apps), you should not configure the following settings because they will prevent automatic Store updates. As of May 2023, the only automatic offline update feature available through Microsoft using Configuration Manager is **disabled**, after being deprecated since November 2021 (see https://learn.microsoft.com/en-us/mem/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business). In other words, updates to built-in applications will only be done online (automatically) or using Winget (via scripts).
 
 > While there are other settings like "Turn off Automatic Download of updates on Win8 machines", only settings that apply to supported Windows 10 an higher will be discussed here. You shouldn't configure settings that don't apply to your operating system, as this could have unintended consequences.
-{.is-info}
+{.is-info} 
 ### Consequences of not updating built-in apps
 - Security issues are not resolved
 - Upgrades to newer versions of the operating system may cause applications to stop working (calculator, photos, sticky notes...)
