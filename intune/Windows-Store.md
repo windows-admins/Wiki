@@ -2,14 +2,14 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-08-11T22:08:48.654Z
+date: 2023-08-11T22:12:03.877Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
 ---
 
 # Windows Store
-This entry will try to point out typical misconceptions about all settings related to the Windows Store using Intune. Please note that it is specifically aimed at Intune using CSPs, which in this case requires a Windows Enterprise/Education license for most settings shown here (verify by visiting the CSP documentation linked here). The behavior using different methods of configuration should be similar, but is not guaranteed.  
+This entry will try to point out typical misconceptions about all settings related to the Windows Store using Intune. Please note that it is specifically aimed at Intune using CSPs, which in this case requires a Windows Enterprise/Education license for most settings shown here (verify by visiting the CSP documentation linked here). The behavior using different methods of configuration should be similar, but is not guaranteed.
 
 ## Block user access to the store
 There is only one setting required to block access to the store and it is called "Require private store only". https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-applicationmanagement#requireprivatestoreonly. Keep in mind that if the store is disabled for a long time, app updates will happen at this point. Consider configuring delivery optimization to avoid network congestion. 
