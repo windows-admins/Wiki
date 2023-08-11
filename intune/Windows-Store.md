@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-08-01T21:36:01.574Z
+date: 2023-08-11T22:08:48.654Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -48,3 +48,8 @@ While this setting does not prevent Store applications from updating, it does pr
 ## Persistence of apps through wipe
 When 'System' is selected as the installation context for UWP applications using the Microsoft Store (new) method, they are added to the operating system's provisioned packages. This means that applications installed this way will survive a wipe (with no options selected), a fresh start, and an Autopilot reset. However, after these actions, the application will appear as if uninstalled in the company portal, even though it is installed and available to the user.
 ![uwpaddedtoprovisionedpackage.png](/uwpaddedtoprovisionedpackage.png)
+## Network requirements
+Working with a proxy or firewall the following URLs need to be reachable in both the system **and** user context.
+> General addresses: https://learn.microsoft.com/en-us/mem/intune/fundamentals/intune-endpoints#microsoft-store 
+> Specific addresses: https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints
+{.is-info}
