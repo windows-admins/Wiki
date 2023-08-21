@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2023-08-21T18:35:42.519Z
+date: 2023-08-21T18:36:21.587Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -53,5 +53,5 @@ Working with a proxy or firewall the following URLs need to be reachable in both
 {.is-info}
 
 ## Related Content
-- [App-Installer](/intune/App-Installer)
-- [deploying-store-apps-during-esp](/autopilot/deploying-store-apps-during-esp)
+- [App Installer](/intune/App-Installer)
+- [Deploying store apps during ESP](/autopilot/deploying-store-apps-during-esp)
