@@ -2,17 +2,16 @@
 title: Deploying Store Apps During ESP
 description: 
 published: true
-date: 2022-10-13T21:50:33.607Z
-tags: 
+date: 2023-08-21T18:37:09.563Z
+tags: autopilot, intune, windows, mdm, windows store
 editor: markdown
 dateCreated: 2022-05-27T23:53:49.294Z
 ---
 
-> **NOTE: The Microsoft Store for Business will be [retired in Q1 2023](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423)!**
-Functionality is to be replaced by the Windows Package Manager ([winget](https://github.com/microsoft/winget-cli)) and integration into Intune to enable easy deployment of both MS Store apps (such as the Company Portal), or Win32 Apps (such as Acrobat Reader, 7Zip and Google Chrome) from a validated [community repository](https://github.com/microsoft/winget-pkgs).
-This functionality is unlikely to be back-ported to ConfigMgr, so it is advised to begin preparing for this change by removing any reliance on the Store for Business where possible.
-Pages will be updated as soon as more information is available.
-Latest update (28/07/22): [Update to Endpoint Manager integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
+> **NOTE: The Microsoft Store for Business ~~will be~~ was [retired in Q1 2023](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423)!**
+See [Update to Endpoint Manager integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
+For more information about the replacing functionality follow this link: 
+**[App-Installer](/intune/App-Installer)**
 {.is-info}
 
 
@@ -44,5 +43,5 @@ When you assign the offline app don't forget to change the license type to devic
 
 ![licensetype.jpg](/licensetype.jpg)
 
-https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app
+Source: ["Download and offline licensed app"](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app)
 
