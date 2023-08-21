@@ -1,8 +1,8 @@
 ---
 title: App Installer
 description: The app installer (aka winget) is a package manager for Windows Operating Systems
-published: false
-date: 2023-08-21T21:05:06.768Z
+published: true
+date: 2023-08-21T21:14:37.782Z
 tags: intune, windows, csp, mdm, app installer, winget
 editor: markdown
 dateCreated: 2023-08-21T18:25:37.613Z
