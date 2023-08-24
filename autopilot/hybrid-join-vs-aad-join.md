@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2023-07-17T22:08:48.743Z
+date: 2023-08-24T11:27:02.415Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -72,9 +72,8 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 
 ## When should you use HAADJ?
 
-* HAADJ is absolutely fine for your existing, already domain-joined devices.
-* There's **no** reason not to enable hybrid join for all existing domain-joined devices.
-* You want to continue to use Group Policy to manage devices.
+* HAADJ is absolutely fine for your existing, already domain-joined devices. In fact there's no reason **not** to enable hybrid join for all existing domain-joined devices.
+* You ~~want to~~ have to continue to use Group Policy to manage devices.
 * Anything you continue to image for "reasons" in a traditional process should end up hybrid-joined.
 * You need device-based Kerberos auth and you can't replace it with certificates.
 * You have 802.1x infrastructure relying on computer objects in AD.
@@ -87,8 +86,8 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 
 ## Why *should* you use Azure AD Join?
 
-* Azure AD join is the preferred choice going forward
-* Any user assigned device deployed via Autopilot should be user-driven Azure AD-only 99% of the time.
+* Azure AD join is the **recommended and preferred choice going forward**.
+* Any user-assigned device deployed via Autopilot should be user-driven Azure AD-only 99% of the time.
 
 ## How do I migrate from HAADJ to AADJ?
 
@@ -99,5 +98,6 @@ There is **no pressure** to do this within a defined timescale. Your existing on
 ## External Links
 
 * [Cloud native Windows endpoints | Microsoft Learn](https://learn.microsoft.com/en-gb/mem/cloud-native-endpoints-overview)
+* [Road to the cloud - Implement a cloud-first approach when moving identity and access management from Active Directory to Azure AD | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/architecture/road-to-the-cloud-implement)
 * [To AAD Join or Not … That is the Question](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/to-aad-join-or-not-that-is-the-question/ba-p/3435768)
 * [HAADJ: Stop it, you're making it worse for yourself (mostly)](https://skiptotheendpoint.co.uk/haadj-stop-it-youre-making-it-worse-for-yourself-mostly/)
