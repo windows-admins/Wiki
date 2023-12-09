@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2023-12-09T18:50:01.610Z
+date: 2023-12-09T18:53:07.538Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -10,7 +10,7 @@ dateCreated: 2022-09-30T11:20:45.613Z
 
 # Hybrid Join vs Cloud Native Join
 
-> 09/12/23: This page has been updated to reflect the renaming of Azure AD to Entra ID:
+> 2023-12-09: This page has been updated to reflect the renaming of Azure AD to Entra ID:
 [Azure AD is Becoming Microsoft Entra ID - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436)
 {.is-info}
 
