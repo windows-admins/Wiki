@@ -2,7 +2,7 @@
 title: Windows App Best Practices
 description: 
 published: true
-date: 2024-03-07T08:43:46.951Z
+date: 2024-03-07T09:03:13.293Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-16T14:56:13.347Z
@@ -48,7 +48,7 @@ You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.co
 
 #### Process flow to create a .intunewin file
 
-   ![win32-app-flow](https://docs.microsoft.com/en-us/mem/intune/apps/media/apps-win32-app-management/prepare-win32-app.png)
+   ![win32wrkflw.png](/intune/win32wrkflw.png)
 
 #### Running the Microsoft Win32 Content Prep Tool
 
