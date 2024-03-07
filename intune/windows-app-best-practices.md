@@ -2,7 +2,7 @@
 title: Windows App Best Practices
 description: 
 published: true
-date: 2022-10-08T22:48:15.283Z
+date: 2024-03-07T08:43:46.951Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-16T14:56:13.347Z
@@ -33,7 +33,7 @@ To use Win32 app management, be sure you meet the following criteria:
 {.is-info}
 
 
-- Windows application size is capped at 8 GB per app.
+- Windows application size is capped at 30 GB per app.
 
 ### Convert the Win32 app content
 
@@ -72,3 +72,5 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 |    `IntuneWinAppUtil -h`    |    This command will show usage information for the tool.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command will generate the *.intunewin* file from the specified source folder and setup file. For the MSI setup file, this tool will retrieve required information for Intune. If `-q` is specified, the command will run in quiet mode. If the output file already exists, it will be overwritten. Also, if the output folder doesn't exist, it will be created automatically.    |
 
+## Troubleshooting
+There is a issue with the Microsoft Win32 Content Prep Tool in that it will occasionally crash when generating an intunewin package. The fix is to run CMD/Powershell, **maximise** the window, and call `IntuneWinAppUtil.exe` with your desired parameters.
