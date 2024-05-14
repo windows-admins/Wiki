@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2024-02-07T19:33:55.160Z
+date: 2024-05-14T13:48:44.096Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -12,7 +12,7 @@ dateCreated: 2023-07-25T19:41:32.958Z
 This entry will try to point out typical misconceptions about all settings related to the Windows Store using Intune. Please note that it is specifically aimed at Intune using CSPs, which in this case requires a Windows Enterprise/Education license for most settings shown here (verify by visiting the CSP documentation linked here). The behavior using different methods of configuration should be similar, but is not guaranteed.
 
 ## Block user access to the store while allowing updates
-Currently, both methods provide the same outcome, with the exception of winget availabiltiy. Microsoft usually points at the second method, hinting so 
+Currently, both methods provide the same outcome, with the exception of winget availabiltiy. Microsoft usually points at the second method, see ["this source"](https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft#common-store-policy-settings-and-their-impact-on-microsoft-store-apps)
 ### Using "Require private store only"
 There is only one setting required to block access to the store and it is called  ["Require private store only"](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-applicationmanagement#requireprivatestoreonly). Keep in mind that if the store is disabled for a long time, app updates will happen at this point. Consider configuring delivery optimization to avoid network congestion. 
 
