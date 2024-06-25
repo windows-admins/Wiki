@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2023-05-28T20:18:30.492Z
+date: 2024-06-25T17:40:43.535Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -47,23 +47,23 @@ Get-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.
 ```
 Sample output:
 ```powershell
-Get-AzureADKerberosServer -Domain 'corp.ajf.one' -UserPrincipalName 'ajf-ga@ajf.one'
+Get-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.onmicrosoft.com'
 
 
-Id                 : 11637
-UserAccount        : CN=krbtgt_AzureAD,OU=Users,OU=T0,DC=corp,DC=ajf,DC=one
-ComputerAccount    : CN=AzureADKerberos,OU=Domain Controllers,DC=corp,DC=ajf,DC=one
-DisplayName        : krbtgt_11637
-DomainDnsName      : corp.ajf.one
-KeyVersion         : 864665
-KeyUpdatedOn       : 3/15/2023 6:44:39 AM
-KeyUpdatedFrom     : CORPDC02.corp.ajf.one
-CloudDisplayName   : krbtgt_11637
-CloudDomainDnsName : corp.ajf.one
-CloudId            : 11637
-CloudKeyVersion    : 864665
-CloudKeyUpdatedOn  : 3/15/2023 6:44:39 AM
-CloudTrustDisplay  : Microsoft.AzureAD.Kdc.Service.TrustDisplay
+Id                 : 31787
+UserAccount        : CN=krbtgt_AzureAD,CN=Users,DC=ad,DC=domain,DC=tld
+ComputerAccount    : CN=AzureADKerberos,OU=Domain Controllers,DC=ad,DC=domain,DC=tld
+DisplayName        : krbtgt_31787
+DomainDnsName      : ad.domain.tld
+KeyVersion         : 46771
+KeyUpdatedOn       : 6/23/2024 8:05:44 PM
+KeyUpdatedFrom     : DC01.ad.domain.tld
+CloudDisplayName   : krbtgt_31787
+CloudDomainDnsName : ad.domain.tld
+CloudId            : 31787
+CloudKeyVersion    : 46771
+CloudKeyUpdatedOn  : 6/23/2024 8:05:44 PM
+CloudTrustDisplay  :
 ```
 
 ## Configuring Cloud Kerberos Trust Settings
