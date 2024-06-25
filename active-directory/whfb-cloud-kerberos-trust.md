@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-06-25T17:46:13.484Z
+date: 2024-06-25T17:46:24.089Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -96,7 +96,7 @@ Cloud Kerberos Trust can be enabled via GPO, or via a Configuration Profile in I
 
 4. Save the GPO, and link it to the appropriate OU(s)
 
-## Validating Functionality
+## Validating Functionality & Troubleshooting
 
 Once configured, attempt to access an on-premises resource such as a file share while signed in using WHfB, and it should seamless open. One issue that we've seen pop up from time to time is you still get an auth prompt, and resetting the WHfB cert container and re-enrolling WHfB seems to be a quick and easy solution:
 
