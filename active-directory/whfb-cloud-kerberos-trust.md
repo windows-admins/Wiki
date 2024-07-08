@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-06-25T17:46:24.089Z
+date: 2024-07-08T20:43:33.769Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -105,3 +105,7 @@ Once configured, attempt to access an on-premises resource such as a file share 
 3. Log off and back on with password, and re-enroll WHfB
 4. Log off and back on with WHfB, and attempt to access on-premises resources again
 5. Profit!
+
+### Browsing to my internal website using IWA throws up an auth prompt?!
+
+This is most likely due to you internal site not being added to the "intranet" site to zone mapping, which allows for automatic signin using logged on credentials. Add your internal site's URL(s) to the intranet zone via Intune configuration and this should start working.
