@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-07-12T13:38:52.699Z
+date: 2024-07-12T13:40:07.131Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -23,7 +23,7 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 >
 > These accounts cannot authenticate against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
 >
-> Check the `adminCount` attribute of the account if you are unsure if it is not currently in any highly privileged groups; this attribute being set to `1` indicitates that it currently is or at one time was highly privileged.
+> Check the `adminCount` attribute of the account if you are unsure; if this attribute is set to `1`, this indicitates that it currently **is** or at one time **was** highly privileged.
 {.is-danger}
 4. Azure AD Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB.
 5. Cloud Kerberos Trust settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
