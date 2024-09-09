@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-07-12T13:44:21.780Z
+date: 2024-09-09T19:18:24.529Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -12,27 +12,27 @@ dateCreated: 2023-03-31T14:54:12.491Z
 
 In order to access on-premises resources (such as file shares), with a hybrid (i.e. Entra ID synced) identity, on a Hybrid AD or Entra ID joined endpoint utilizing Windows Hello for Business, Cloud Kerberos Trust needs to be deployed. Previously, there were two other trust types to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
 
-Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisiting technology that enabled SSO via FIDO2, Azure AD Kerberos.
+Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisiting technology that enabled SSO via FIDO2, Entra Kerberos (formally known as "Azure AD Kerberos").
 
 ## Prerequisites
 
 1. Windows 10 21H2 or later
 2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2022 already?)
 3. User accounts expected to use WHfB synced to Entra ID
-> WARNING: AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Azure AD Kerberos functions as a "virtual" RODC.
+> WARNING: AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Entra Kerberos functions as a "virtual" RODC.
 >
 > These accounts cannot authenticate against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
 >
 > Check the `adminCount` attribute of the account if you are unsure; if this attribute is set to `1`, this indicitates that it currently **is** or at one time **was** highly privileged.
 {.is-danger}
-4. Azure AD Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB.
+4. Entra Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB.
 5. Cloud Kerberos Trust settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
 
-## Enabling Azure AD Kerberos
+## Enabling Entra Kerberos
 
 MS Documentation: https://learn.microsoft.com/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises#create-a-kerberos-server-object
 
-> Note: Azure AD Kerberos must be enabled in EVERY domain across ALL forests that contain users accounts synced to Entra ID and expected to utilize WHfB.
+> Note: Entra Kerberos must be enabled in EVERY domain across ALL forests that contain users accounts synced to Entra ID and expected to utilize WHfB.
 {.is-info}
 
 The easiest place to configure Azure AD Kerboros from is the server that runs Azure AD Connect, as this is considered a tier 0 server, and you will need to utilize Domain Admin and Global Admin/Hybrid Identity Administrator credentials. The required PowerShell module will also be present in the AADC install directory.
@@ -41,7 +41,7 @@ The easiest place to configure Azure AD Kerboros from is the server that runs Az
 ```powershell
 Import-Module -FullyQualifiedName 'C:\Program Files\Microsoft Azure Active Directory Connect\AzureADKerberos\AzureAdKerberos.psd1'
 ```
-2. Cofigure Azure AD Kerberos (replace Domain with your AD domain name, and UserPrincipalName with the UPN of your GA account)
+2. Cofigure Entra Kerberos (replace Domain with your AD domain name, and UserPrincipalName with the UPN of your GA account)
 ```powershell
 Set-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.onmicrosoft.com'
 ```
