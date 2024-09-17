@@ -2,8 +2,8 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2024-09-17T12:06:20.571Z
-tags: immutable id, connect identities
+date: 2024-09-17T12:07:00.087Z
+tags: immutable id, merge identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
 ---
