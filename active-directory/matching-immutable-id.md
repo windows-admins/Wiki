@@ -2,7 +2,7 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2024-09-17T12:05:27.020Z
+date: 2024-09-17T12:06:20.571Z
 tags: immutable id, connect identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
@@ -59,7 +59,9 @@ Replace "user@example.com" with the user's Azure AD Object ID and "base64Immutab
 
 Wait for the next scheduled synchronization, or force a synchronization using the following command on your Azure AD Connect server:
 
-``` Start-ADSyncSyncCycle -PolicyType Delta ```
+``` 
+Start-ADSyncSyncCycle -PolicyType Delta 
+```
 
 # Notes
 
