@@ -2,7 +2,7 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2024-09-17T12:04:16.750Z
+date: 2024-09-17T12:05:27.020Z
 tags: immutable id, connect identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
@@ -24,7 +24,7 @@ Active Directory Module
 Azure AD Module
 
 # Step-by-Step Instructions
-## 1. Fetch the Azure AD Immutable ID
+## Fetch the Azure AD Immutable ID
 Use the following PowerShell command to get the Immutable ID of the Azure AD user:
 
 ```
