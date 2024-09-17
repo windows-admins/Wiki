@@ -2,7 +2,7 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2024-09-17T12:03:04.332Z
+date: 2024-09-17T12:04:16.750Z
 tags: immutable id, connect identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
@@ -17,14 +17,14 @@ When managing users across both on-premises Active Directory (AD) and Azure Acti
 
 By correctly matching the Immutable ID between Azure AD and on-premises AD, you can maintain data integrity and seamless access for the user across both environments.
 
-### Prerequisites
+# Prerequisites
 Ensure the following PowerShell modules are installed:
 
 Active Directory Module
 Azure AD Module
 
-### Step-by-Step Instructions
-1. Fetch the Azure AD Immutable ID
+# Step-by-Step Instructions
+## 1. Fetch the Azure AD Immutable ID
 Use the following PowerShell command to get the Immutable ID of the Azure AD user:
 
 ```
@@ -34,7 +34,7 @@ Get-AzureADUser -ObjectId "user@example.com" | Select-Object ImmutableId
 This command will output the Immutable ID for the user.
 
 
-### Retrieve the Immutable ID from On-Premises AD
+## Retrieve the Immutable ID from On-Premises AD
 
 To retrieve the corresponding Immutable ID from the on-prem AD user, use the following commands:
 
@@ -45,7 +45,7 @@ $immutableID
 ```
 This converts the on-prem AD user's **ObjectGUID** into a base64-encoded string, which is the format used for the Immutable ID in Azure AD.
 
-### Set the Immutable ID in Azure AD
+## Set the Immutable ID in Azure AD
 
 To update the Azure AD user with the on-prem AD Immutable ID, run the following command:
 
@@ -55,13 +55,13 @@ Set-AzureADUser -ObjectId "user@example.com" -ImmutableId "base64ImmutableID"
 
 Replace "user@example.com" with the user's Azure AD Object ID and "base64ImmutableID" with the Base64 string obtained from the previous step.
 
-### Sync Azure AD with On-Premises AD
+## Sync Azure AD with On-Premises AD
 
 Wait for the next scheduled synchronization, or force a synchronization using the following command on your Azure AD Connect server:
 
 ``` Start-ADSyncSyncCycle -PolicyType Delta ```
 
-### Notes
+# Notes
 
 * Ensure that you have the necessary permissions to execute these commands.
 * Verify that the Azure AD Connect server is correctly configured and running.
