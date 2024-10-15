@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-09-09T19:18:24.529Z
+date: 2024-10-15T22:26:22.276Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -25,6 +25,14 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 >
 > Check the `adminCount` attribute of the account if you are unsure; if this attribute is set to `1`, this indicitates that it currently **is** or at one time **was** highly privileged.
 {.is-danger}
+* You can test if an account can authenticate using Entra Kerberos by checking if password replication to the AzureADKerberos RODC object is allowed by doing the following:
+  1. Open the properties window for the AzureADKerberos object and go to the Password Replication Policy tab
+  2. Click Advanced, and select the Resultant Policy tab
+  3. Click Add, and search for and select the user account(s) you want to check
+  4. View the results. In the below example, `ajf` is a normal user account, and is allowed. `ajf-da` is a member of `Domain Admins` and thus is denied.
+
+  ![aadk-rodc-props.png](/aadk-rodc-props.png)
+
 4. Entra Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB.
 5. Cloud Kerberos Trust settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
 
