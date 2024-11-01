@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-10-18T13:54:23.522Z
+date: 2024-11-01T16:31:26.692Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -17,7 +17,7 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 ## Prerequisites
 
 1. Windows 10 21H2 or later
-2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2022 already?)
+2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2025 already?)
 3. User accounts expected to use WHfB synced to Entra ID
 > WARNING: AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Entra Kerberos functions as a "virtual" RODC.
 >
