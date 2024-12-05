@@ -2,7 +2,7 @@
 title: Platfrom SSO
 description: 
 published: false
-date: 2024-12-05T15:49:41.541Z
+date: 2024-12-05T15:55:33.864Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
@@ -19,21 +19,17 @@ In order to deploy SSO on Mac Devices, and enable users to log in with their Ent
 
 MS Documentation: https://learn.microsoft.com/en-us/mem/intune/configuration/platform-sso-macos
 
-> Microsoft recommends using Secure Enclave as the authentication method when configuring Platform SSO.
+> Microsoft recommends using **Secure Enclave** as the authentication method when configuring Platform SSO.
 {.is-info}
 
-
 1. Create the Extensible Single Sign On (SSO) Intune Settings Catalogue Policy 
-
-Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.
+![settings-picker-authentication-extensible-sso.png](/intune/settings-picker-authentication-extensible-sso.png)
 
 2. Enter these Values and deploy the policy
-
-Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.
+![intune-psso-device-profile.png](/intune/intune-psso-device-profile.png)
 
 3. Register the device with MFA
-
-Screenshot that shows the registration required prompt on end user devices when you configure Platform SSO in Microsoft Intune.
+![platform-sso-macos-registration-required.png](/intune/platform-sso-macos-registration-required.png)
 
 # Adding Non-Microsoft apps
 1. In order to enable SSO on non-Microsoft apps
