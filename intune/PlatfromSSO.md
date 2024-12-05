@@ -2,7 +2,7 @@
 title: Platfrom SSO
 description: 
 published: false
-date: 2024-12-05T15:55:33.864Z
+date: 2024-12-05T16:01:57.641Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
@@ -14,6 +14,9 @@ In order to deploy SSO on Mac Devices, and enable users to log in with their Ent
 1. MacOS 13.0 and newer
 2. Microsoft Intune Company Portal app version 5.2404.0 and newer deployed 
 3. Microsoft Single Sign On extension if Chrome is getting used
+
+> On how to deploy Cloud Kerberos Trust to access local file shares without an password see [whfb-cloud-kerberos-trust](/active-directory/whfb-cloud-kerberos-trust).
+{.is-info}
 
 # Deploying Platform SSO
 
@@ -33,6 +36,8 @@ MS Documentation: https://learn.microsoft.com/en-us/mem/intune/configuration/pla
 
 # Adding Non-Microsoft apps
 1. In order to enable SSO on non-Microsoft apps
+
+# Validating Functionality & Troubleshooting
 
 # External Links
 Best Practices for Deploying Platform SSO with Microsoft Entra ID–Michael Epping, Mark Morowczynski
