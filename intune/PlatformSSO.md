@@ -2,7 +2,7 @@
 title: Platform SSO
 description: SSO and Entra Join for MacOS
 published: true
-date: 2024-12-05T18:06:52.420Z
+date: 2024-12-05T18:11:31.967Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
@@ -15,6 +15,7 @@ In order to enable SSO on MacOS Devices, and enabling users to log in with their
 1. macOS 13.0 and newer
 2. Microsoft Intune Company Portal app version 5.2404.0 and newer deployed to the devices
 3. [Microsoft Single Sign On extension](https://chromewebstore.google.com/detail/microsoft-single-sign-on/ppnbnpeolgkicgegkbkbjmhlideopiji) if Chrome is getting used
+4. An Apple T2 Security Chip for Secure Enclave 
 
 > On how to deploy Cloud Kerberos Trust to access local file shares without an password see [whfb-cloud-kerberos-trust](/active-directory/whfb-cloud-kerberos-trust).
 {.is-info}
