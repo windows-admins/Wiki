@@ -2,13 +2,13 @@
 title: Troubleshooting
 description: 
 published: true
-date: 2024-12-09T20:06:16.580Z
+date: 2024-12-09T20:55:39.047Z
 tags: powershell, autopilot, esp
 editor: markdown
 dateCreated: 2022-09-30T11:20:40.828Z
 ---
 
-It's pretty simple, just launch PowerShell, install, and execute the `Get-AutopilotDiagnostics` script.
+It's pretty simple, just launch PowerShell, install, and execute the `Get-AutopilotDiagnosticsCommunity` script.
 
 ## The Steps
 1. Press Shift + F10 to launch a command prompt
