@@ -2,14 +2,14 @@
 title: Platform SSO
 description: SSO and Entra Join for MacOS
 published: true
-date: 2024-12-05T19:19:21.257Z
+date: 2024-12-12T12:35:23.939Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
 ---
 
 # Platform SSO
-In order to enable SSO on MacOS Devices, and enabling users to log in with their Entra Credentials, Platform SSO needs to be deployed. Previously, there were three other tools to achieve a similar functionality, namely Domain Join, Microsoft Enterprise SSO plug-in, and Kerberos SSO, Platform SSO combines them in one tool to deploy, it is the Microsoft **prefered and recommended** option.
+In order to enable SSO on macOS devices and allow users to log in with their Entra credentials as well as loging in with the Phishing Resistend Multi-Factor-Authentication Secure Enclave, Platform SSO must be implemented. Previously, there were three other tools to achieve a similar functionality, namely Domain Join, Microsoft Enterprise SSO plug-in, and Kerberos SSO, Platform SSO combines them in one tool to deploy, it is the Microsoft **prefered and recommended** option.
 
 # Prerequisites
 1. macOS 13.0 and newer
