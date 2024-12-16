@@ -2,7 +2,7 @@
 title: Inject drivers into WinRE
 description: This page will explain why this might be necessary and show how to do it. 
 published: true
-date: 2024-12-16T22:15:11.370Z
+date: 2024-12-16T22:31:59.171Z
 tags: windows, drivers, winre
 editor: markdown
 dateCreated: 2024-09-29T21:11:01.024Z
@@ -12,7 +12,7 @@ dateCreated: 2024-09-29T21:11:01.024Z
 If you're on this page, you probably already know what you want to do, you just don't know how. This post will use [this script](https://github.com/MHimken/WinRE-Customization), which is explained in [this blog](https://manima.de/2023/01/modify-winre-patches-drivers-and-cve-2022-41099/#adding-drivers).
 
 ## Mission statement
-There are several situations where you might want to add drivers to a [WinRE image](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) - not to be confused with Win**P**E. Here are the most common ones, during a recovery scenario (where you'd need WinRE to recognize a specific device). You will notice that these drivers are usually related to storage, display, or ethernet. 
+There are several situations where you might want to add drivers to a [WinRE image](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) - not to be confused with Win**P**E. There are several situations where you might want to add drivers to a WinRE image - not to be confused with WinPE. These are the most common ones during a recovery scenario (where you'd need WinRE to detect a specific device - you will find that these drivers are usually storage, display or ethernet related):
 
 - Hardware has been added that requires drivers to be available (perhaps an external display for a purpose-built device).
 - UEFI has been changed from AHCI to RAID, but the device fails to reset. Some devices use this by default (e.g. Dell).
