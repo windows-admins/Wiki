@@ -2,13 +2,13 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-12-04T08:48:10.861Z
+date: 2024-12-18T14:59:50.655Z
 tags: whfb
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
 ---
 
-# Windows Hello for Business/Secure Enclave - Cloud Kerberos Trust
+# Windows Hello for Business - Cloud Kerberos Trust
 
 In order to access on-premises resources (such as file shares), without an Password, with a hybrid (i.e. Entra ID synced) identity, on a Hybrid AD or Entra ID joined endpoint utilizing Windows Hello for Business or Secure Enclave, Cloud Kerberos Trust needs to be deployed. Previously, there were two other trust types to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
 
