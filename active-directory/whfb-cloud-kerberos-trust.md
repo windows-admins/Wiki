@@ -2,24 +2,23 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-12-18T14:59:50.655Z
-tags: whfb
+date: 2024-12-18T15:01:26.959Z
+tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
 ---
 
 # Windows Hello for Business - Cloud Kerberos Trust
 
-In order to access on-premises resources (such as file shares), without an Password, with a hybrid (i.e. Entra ID synced) identity, on a Hybrid AD or Entra ID joined endpoint utilizing Windows Hello for Business or Secure Enclave, Cloud Kerberos Trust needs to be deployed. Previously, there were two other trust types to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
+In order to access on-premises resources (such as file shares), with a hybrid (i.e. Entra ID synced) identity, on a Hybrid AD or Entra ID joined endpoint utilizing Windows Hello for Business, Cloud Kerberos Trust needs to be deployed. Previously, there were two other trust types to facilitate this, namely Key Trust and Certificate Trust, both which involve deploying certificates to some degree.
 
 Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisiting technology that enabled SSO via FIDO2, Entra Kerberos (formally known as "Azure AD Kerberos").
 
 ## Prerequisites
 
-1. Windows 10 21H2 or later or macOS 13.0 or later
-2. Microsoft Intune Company Portal app version 5.2404.0 and newer (for MacOS)
-3. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2025 already?)
-4. User accounts expected to use WHfB/Secure Enclave synced to Entra ID
+1. Windows 10 21H2 or later
+2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2025 already?)
+3. User accounts expected to use WHfB synced to Entra ID
 > WARNING: AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Entra Kerberos functions as a "virtual" RODC.
 >
 > These accounts cannot authenticate against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
@@ -34,8 +33,8 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 
   ![aadk-rodc-props.png](/aadk-rodc-props.png)
 
-4. Entra Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB or Secure Enclave.
-5. Cloud Kerberos Trust Windows settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
+4. Entra Kerberos in place in EVERY domain in EVERY forest containing user accounts that are synced to Entra ID and expected to utilize WHfB.
+5. Cloud Kerberos Trust settings in place on endpoints (eith via GPO or Intune Settings Catalog configuration profile)
 
 ## Enabling Entra Kerberos
 
@@ -79,7 +78,7 @@ CloudKeyUpdatedOn  : 6/23/2024 8:05:44 PM
 CloudTrustDisplay  :
 ```
 
-## Configuring Cloud Kerberos Trust Settings for Windows
+## Configuring Cloud Kerberos Trust Settings
 
 MS Docs: https://learn.microsoft.com/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy
 
@@ -111,7 +110,7 @@ Cloud Kerberos Trust can be enabled via GPO, or via a Configuration Profile in I
 
 ## Validating Functionality & Troubleshooting
 
-Once configured, attempt to access an on-premises resource such as a file share while signed in using WHfB/Secure Enclave, and it should seamless open. One issue that we've seen pop up from time to time is you still get an auth prompt, and resetting the WHfB cert container and re-enrolling WHfB seems to be a quick and easy solution:
+Once configured, attempt to access an on-premises resource such as a file share while signed in using WHfB, and it should seamless open. One issue that we've seen pop up from time to time is you still get an auth prompt, and resetting the WHfB cert container and re-enrolling WHfB seems to be a quick and easy solution:
 
 1. Open cmd as admin
 2. Run `certutil -deleteHelloContainer`
