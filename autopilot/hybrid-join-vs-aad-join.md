@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2024-12-15T09:02:41.688Z
+date: 2024-12-23T15:12:49.413Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -109,3 +109,4 @@ There is **no pressure** to do this within a defined timescale. Your existing on
 * [Road to the cloud - Implement a cloud-first approach when moving identity and access management from Active Directory to Azure AD | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/architecture/road-to-the-cloud-implement)
 * [To AAD Join or Not … That is the Question](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/to-aad-join-or-not-that-is-the-question/ba-p/3435768)
 * [HAADJ: Stop it, you're making it worse for yourself (mostly)](https://skiptotheendpoint.co.uk/haadj-stop-it-youre-making-it-worse-for-yourself-mostly/)
+* [Entra join only is a journey – are you on it yet?](https://manima.de/2024/10/entra-join-only-is-a-journey-are-you-on-it-yet/)
