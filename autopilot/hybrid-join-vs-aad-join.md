@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2024-12-23T15:12:49.413Z
+date: 2024-12-29T17:18:54.144Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -89,13 +89,14 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 * It can be hideously difficult to implement and even require deployment of new infrastructure depending on your environment.
 * It has significantly more moving parts involved, and a failure in any of them will result in failed Autopilot builds.
 * It keeps your system more complex (more points of failure, security risks, troubleshooting, etc.); hybrid joining even of existing devices serves to facilitate the transition to Entra Join.
+* It keeps on-premises downsides (like needing line of sight to the DC to login or domain trust)
 
 ### Why *should* you use Cloud Native Join?
 
 * Microsoft Entra ID Join is the **recommended and preferred choice going forward**.
 * It provides a significantly better end-user onboarding experience.
 * With the right pre-requisites in place, most on-prem resource access will continue to work.
-* New features such as [true Passwordless login](https://learn.microsoft.com/en-us/windows/security/identity-protection/passwordless-experience/#system-requirements) _require_ cloud native devices.
+* New features such as [Autopilot device preparation](https://learn.microsoft.com/en-us/autopilot/device-preparation/overview) _require_ cloud native devices.
 
 ## How do I migrate from Hybrid to Cloud Native?
 
