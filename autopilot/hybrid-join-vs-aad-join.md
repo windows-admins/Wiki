@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2025-01-01T13:18:43.443Z
+date: 2025-01-11T12:11:30.411Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -10,8 +10,7 @@ dateCreated: 2022-09-30T11:20:45.613Z
 
 # Hybrid Join vs Cloud Native Join
 
-> 2023-12-09: This page has been updated to reflect the renaming of Azure AD to Entra ID:
-[Azure AD is Becoming Microsoft Entra ID - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436)
+> The article uses Cloud Native Join, Entra Join and AAD Join synonymously.
 {.is-info}
 
 
@@ -25,8 +24,6 @@ The word "Hybrid" is often used interchangably within discussions around Active 
 Hybrid Identity is the technology that underpins almost all of the infrastructure to support an On-Premise + Microsoft Cloud environment. It is 100% required if running in this scenario and is not in question.
 
 With the use and configuration of Entra ID Connect, an on-premise account and its authentication method is synced to Entra ID. This can extend on-premise accounts into the cloud and enable single-sign on capability across cloud services.
-
-More Info:
 
 * [What is hybrid identity with Azure Active Directory? - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
 
@@ -83,7 +80,7 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 ![cloudnativerecommendation.png](/cloudnativerecommendation.png){.align-center}
 > Source: [Enrollment for Microsoft Entra Hybrid Joined devices - Windows Autopilot | Microsoft Learn](https://learn.microsoft.com/en-us/autopilot/windows-autopilot-hybrid)
 
-### Why *shouldn't* you Hybrid Join
+### Why *shouldn't* you Hybrid Join Autopilot
 
 * For brand new devices, it is not recommended by Microsoft. (Or would you buy a bike that the salesperson advises you not to buy?)
 * It can be hideously difficult to implement and even require deployment of new infrastructure depending on your environment.
@@ -91,7 +88,7 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 * It keeps your system more complex (more points of failure, security risks, troubleshooting, etc.); hybrid joining even of existing devices serves to facilitate the transition to Entra Join.
 * It keeps on-premises downsides (like needing line of sight to the DC to login, domain trust, etc.)
 
-### Why *should* you use Cloud Native Join?
+### Why *should* you use Cloud Native Join Autopilot
 
 * Microsoft Entra ID Join is the **recommended, preferred and safe choice going forward**.
 * It provides a significantly better end-user onboarding experience.
