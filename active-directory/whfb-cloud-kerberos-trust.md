@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2024-12-18T15:01:26.959Z
+date: 2025-01-23T23:05:12.010Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -121,3 +121,17 @@ Once configured, attempt to access an on-premises resource such as a file share 
 ### Browsing to my internal website using IWA throws up an auth prompt?!
 
 This is most likely due to you internal site not being added to the "intranet" site to zone mapping, which allows for automatic signin using logged on credentials. Add your internal site's URL(s) to the intranet zone via Intune configuration and this should start working.
+
+### Always On VPN Issues
+
+You may face an issue where on-premises resource access works with direct LoS, but not when using AOVPN. Richard Hicks a few articles related to this:
+
+* https://directaccess.richardhicks.com/2019/05/20/always-on-vpn-clients-prompted-for-authentication-when-accessing-internal-resources/
+* https://directaccess.richardhicks.com/2021/09/20/always-on-vpn-short-name-access-failure/
+
+A potential solution to try is the following:
+
+"To resolve this issue, edit the rasphone.pbk file and change the value of UseRasCredentials to 0. Rasphone.pbk can be found in the $env:AppData\Microsoft\Network\Connections\Pbk folder."
+
+Richard has a script in his GitHub that can be used to modify this file: https://github.com/richardhicks/aovpn/blob/master/Update-Rasphone.ps1
+
