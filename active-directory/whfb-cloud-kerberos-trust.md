@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2025-01-23T23:05:12.010Z
+date: 2025-01-25T14:29:33.298Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -118,18 +118,22 @@ Once configured, attempt to access an on-premises resource such as a file share 
 4. Log off and back on with WHfB, and attempt to access on-premises resources again
 5. Profit!
 
+### Be sure Certificate Trust is NOT also enabled
+
+As mentioned eariler, there are two other trust types, certificate and key. While there are no settings to "enable" key trust, as it is always attempted if nothing else is enabled, certificate trust, if enabled, will take priority over cloud trust. If cloud trust is going to be used, be sure to disable any existing settings for certificate trust,
+
 ### Browsing to my internal website using IWA throws up an auth prompt?!
 
 This is most likely due to you internal site not being added to the "intranet" site to zone mapping, which allows for automatic signin using logged on credentials. Add your internal site's URL(s) to the intranet zone via Intune configuration and this should start working.
 
 ### Always On VPN Issues
 
-You may face an issue where on-premises resource access works with direct LoS, but not when using AOVPN. Richard Hicks a few articles related to this:
+You may face an issue where on-premises resource access works with direct LoS, but not when using AOVPN. Richard Hicks has a few articles related to this:
 
 * https://directaccess.richardhicks.com/2019/05/20/always-on-vpn-clients-prompted-for-authentication-when-accessing-internal-resources/
 * https://directaccess.richardhicks.com/2021/09/20/always-on-vpn-short-name-access-failure/
 
-A potential solution to try is the following:
+This may be caused by AOVPN authenticating via certificate, and then that being attempted to access further resources, instead of Kerberos. A potential solution to try is the following:
 
 "To resolve this issue, edit the rasphone.pbk file and change the value of UseRasCredentials to 0. Rasphone.pbk can be found in the $env:AppData\Microsoft\Network\Connections\Pbk folder."
 
