@@ -2,11 +2,13 @@
 title: Strong Certificate Mapping Enforcement
 description: 
 published: true
-date: 2025-01-29T14:54:29.410Z
+date: 2025-01-29T14:54:58.293Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T14:28:09.017Z
 ---
+
+## More info coming soon...
 
 ## Additional Useful Links
 
