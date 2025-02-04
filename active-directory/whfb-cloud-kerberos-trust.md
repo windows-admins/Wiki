@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2025-01-25T14:29:33.298Z
+date: 2025-02-04T16:09:05.816Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -43,24 +43,23 @@ MS Documentation: https://learn.microsoft.com/azure/active-directory/authenticat
 > Note: Entra Kerberos must be enabled in EVERY domain across ALL forests that contain users accounts synced to Entra ID and expected to utilize WHfB.
 {.is-info}
 
-The easiest place to configure Entra Kerberos from is the server that runs Entra Connect, as this is considered a tier 0 server, and you will need to utilize Domain Admin and Global Admin/Hybrid Identity Administrator credentials. The required PowerShell module will also be present in the installation directory.
+The easiest place to configure Entra Kerberos from is the server that runs Entra Connect, as this is considered a tier 0 server, and you will need to utilize Domain Admin and Global Admin/Hybrid Identity Administrator credentials.
 
-1. Import the module
 ```powershell
-Import-Module -FullyQualifiedName 'C:\Program Files\Microsoft Azure Active Directory Connect\AzureADKerberos\AzureAdKerberos.psd1'
-```
-2. Cofigure Entra Kerberos (replace Domain with your AD domain name, and UserPrincipalName with the UPN of your GA account)
-```powershell
+# Install and import the required PowerShell module
+Install-Module -Name AzureADHybridAuthenticationManagement
+Import-Module -Name AzureADHybridAuthenticationManagement
+
+# Cofigure Entra Kerberos (replace Domain with your AD domain name, and UserPrincipalName with the UPN of your GA account)
 Set-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.onmicrosoft.com'
-```
-3. Verify the configuration
-```powershell
+
+# Verify the configuration
 Get-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.onmicrosoft.com'
 ```
+
 Sample output:
 ```powershell
 Get-AzureADKerberosServer -Domain 'ad.domain.tld' -UserPrincipalName 'ga@domain.onmicrosoft.com'
-
 
 Id                 : 31787
 UserAccount        : CN=krbtgt_AzureAD,CN=Users,DC=ad,DC=domain,DC=tld
@@ -77,6 +76,24 @@ CloudKeyVersion    : 46771
 CloudKeyUpdatedOn  : 6/23/2024 8:05:44 PM
 CloudTrustDisplay  :
 ```
+
+## Rotating the Entra Kerberos Keys
+
+Entra Kerberos functions as a "virtual" RODC, and has a krbtgt account assoicated with it. The keys for this account should be periodically rotated, similar to rotating the domain krbtgt keys (see https://aka.ms/krbtgt for a script for doing that). The Entra Kerberos keys need to be rotated with a specific command in order to ensure the new keys are synced to Entra.
+
+MS Docs: https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises#rotate-the-microsoft-entra-kerberos-server-key
+
+```powershell
+Import-Module -Name AzureADHybridAuthenticationManagement
+
+# Rotate keys
+Set-AzureADKerberosServer -Domain ad.domain.com -UserPrincipalName 'ga@domain.onmicrosoft.com' -RotateServerKey
+
+# Verify key rotation
+Get-AzureADKerberosServer -Domain ad.domain.com -UserPrincipalName 'ga@domain.onmicrosoft.com'
+```
+
+See the sample about in the previous section and confirm that the `KeyUpdatedOn` and `CloudKeyUpdatedOn` attributes match and that they are current.
 
 ## Configuring Cloud Kerberos Trust Settings
 
