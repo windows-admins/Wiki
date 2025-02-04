@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2025-02-04T16:09:05.816Z
+date: 2025-02-04T16:14:40.090Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -42,6 +42,9 @@ MS Documentation: https://learn.microsoft.com/azure/active-directory/authenticat
 
 > Note: Entra Kerberos must be enabled in EVERY domain across ALL forests that contain users accounts synced to Entra ID and expected to utilize WHfB.
 {.is-info}
+
+> Note: The `AzureADHybridAuthenticationManagement` PowerShell module does not seem to work 100% in PowerShell 7. Use this module with PowerShell 5.1 for the best results.
+{.is-danger}
 
 The easiest place to configure Entra Kerberos from is the server that runs Entra Connect, as this is considered a tier 0 server, and you will need to utilize Domain Admin and Global Admin/Hybrid Identity Administrator credentials.
 
