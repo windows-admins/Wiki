@@ -2,7 +2,7 @@
 title: Platform SSO
 description: SSO and Entra Join for MacOS
 published: true
-date: 2024-12-12T12:35:23.939Z
+date: 2025-03-08T09:56:01.850Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
@@ -60,6 +60,14 @@ Value: 1
 - disable_explicit_app_prompt 
 Type: Integer
 Value: 1
+
+# Enforcing Secure Enclave as MFA
+1. To enforce Secure Enclave as MFA, create an Conditional Access Policy, and choose Windows Hello for Business as the authentication type, it includes Secure Enclave.
+
+2. To login with Secure Enclave, do not enter the e-Mail at the Entra login page, choose login options, and then choose Face recognition, fingerprint, PIN or security key to login. 
+
+> You have to scramble the password from the user in Entra or AD, as a Passkey is an alternative login method, and a hacker could use the password to login instead.
+{.is-info}
 
 # Validating Functionality & Troubleshooting
 To verify, if Platfrom SSO has been deployed sucesfully, enter app-sso platform -s into the terminal, on an mac and you should see an SSO Token. 
