@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2025-01-11T12:11:30.411Z
+date: 2025-04-05T09:16:45.024Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -70,7 +70,7 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 ## When should you use Hybrid Joined Devices?
 
 * Hybrid Join is **recommended** for your existing, already domain-joined devices! In fact there's no reason **not** to enable hybrid join for all existing domain-joined devices.
-* You have to continue to use Group Policy to manage devices.
+* You have to continue to use Group Policy to manage devices. (When you migrate the policies to Intune, ask yourself, do you REALLY need all the GPO's?)
 * Anything you continue to image for "reasons" in a traditional process should end up hybrid-joined.
 * You're only ever going to be "building" devices on-prem with line-of-sight to Active Directory and associated resources.
 * You need device-based Kerberos auth and you can't replace it with certificates.
