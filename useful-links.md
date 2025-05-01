@@ -1,8 +1,8 @@
 ---
-title: Link Collection
+title: Useful Links
 description: Contains a list of useful blogs, that don't need reposting in the wiki
 published: true
-date: 2025-05-01T22:12:12.705Z
+date: 2025-05-01T22:13:17.779Z
 tags: links, references
 editor: markdown
 dateCreated: 2025-04-30T20:47:04.329Z
