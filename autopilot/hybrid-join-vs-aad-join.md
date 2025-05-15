@@ -2,7 +2,7 @@
 title: Hybrid Join vs AAD Join
 description: The struggle of staying on-prem because it's "safe" vs. breaking your tech-debt shackles and moving to modern management.
 published: true
-date: 2025-04-11T17:08:27.661Z
+date: 2025-05-15T14:01:19.384Z
 tags: autopilot, intune, windows, best practice, haadj
 editor: markdown
 dateCreated: 2022-09-30T11:20:45.613Z
@@ -70,7 +70,7 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 ## When should you use Hybrid Joined Devices?
 
 * Hybrid Join is **recommended** for your existing, already domain-joined devices! In fact there's no reason **not** to enable hybrid join for all existing domain-joined devices.
-* You have to continue to use Group Policy to manage devices. (When you migrate the policies to Intune, ask yourself, do you REALLY need all the GPO's?)
+* You have to continue to use Group Policy to manage devices. (This refers to compliance reasons, not to technical reasons)
 * Anything you continue to image for "reasons" in a traditional process should end up hybrid-joined.
 * You need device-based Kerberos auth and you can't replace it with certificates.
 * You have 802.1x infrastructure relying on computer objects in AD.
@@ -97,6 +97,8 @@ Begin to review guidance on [Zero Trust identity and device access](https://lear
 ## How do I migrate from Hybrid to Cloud Native?
 
 There is **no _supported_ migration path** from Hybrid Joined Devices to Cloud Native Devices that doesn't potentially compromise the device in a way that could cause significant issues in the future and be almost impossible to diagnose. The device should be wiped/reset and brought into being Cloud Native via Autopilot either via attrition (user leaver/joiner process) or defined projects to bring devices into Modern Management.
+
+When you migrate the policies to Intune, ask yourself, do you REALLY need all the GPO's?
 
 There is **no pressure** to do this within a defined timescale. Your existing on-premise infrastructure will continue to manage those devices.
 
