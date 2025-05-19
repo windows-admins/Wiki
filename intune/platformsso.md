@@ -2,7 +2,7 @@
 title: Platform SSO
 description: SSO and Entra Join for MacOS
 published: true
-date: 2025-05-19T21:54:26.325Z
+date: 2025-05-19T21:54:37.012Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
