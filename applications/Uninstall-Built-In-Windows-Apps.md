@@ -2,7 +2,7 @@
 title: Uninstall Built-In Windows Apps
 description: This article will explain how to officially remove built-in apps from Windows 10 and up.
 published: true
-date: 2023-06-26T21:02:19.139Z
+date: 2025-05-19T21:51:36.729Z
 tags: intune, windows, store
 editor: markdown
 dateCreated: 2023-06-14T20:33:27.072Z
