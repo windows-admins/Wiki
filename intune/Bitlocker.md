@@ -1,8 +1,8 @@
 ---
-title: Bitlocker
+title: BitLocker
 description: 
 published: true
-date: 2023-07-27T15:25:54.713Z
+date: 2025-05-19T21:53:57.851Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-26T14:39:27.350Z
