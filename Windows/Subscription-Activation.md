@@ -2,7 +2,7 @@
 title: Windows Subscription Activation
 description: This page explains what to look out for with subscription activation.
 published: true
-date: 2025-05-19T20:17:27.337Z
+date: 2025-05-19T21:12:13.062Z
 tags: windows, licensing, activation, subscription activation
 editor: markdown
 dateCreated: 2025-05-15T20:21:25.692Z
