@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2025-02-04T16:14:40.090Z
+date: 2025-07-21T00:43:53.069Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -19,11 +19,15 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 1. Windows 10 21H2 or later
 2. Enough Windows Server 2016 or later Domain Controllers to handle the expected authentication load (why aren't they all 2025 already?)
 3. User accounts expected to use WHfB synced to Entra ID
-> WARNING: AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Entra Kerberos functions as a "virtual" RODC.
+> WARNING!
+>
+> AD accounts that are a member of sensitive, highly privileged groups such as `Domain Admins`, or otherwise inherit membership into `Denied RODC Password Replication Group` cannot utilize Cloud Kerberos Trust, as Entra Kerberos functions as a "virtual" RODC.
 >
 > These accounts cannot authenticate against or have their password replicated to an RODC by default (and no, this should NOT be modified). Additionally, these accounts should not be synced to the cloud in the first place.
 >
 > Check the `adminCount` attribute of the account if you are unsure; if this attribute is set to `1`, this indicitates that it currently **is** or at one time **was** highly privileged.
+>
+> Additionally, if the user is not a member of `Domain Users` for some reason, this will prevent things from working "by default", as this is how users are able to use Entra Kerberos.
 {.is-danger}
 * You can test if an account can authenticate using Entra Kerberos by checking if password replication to the AzureADKerberos RODC object is allowed by doing the following:
   1. Open the properties window for the AzureADKerberos object and go to the Password Replication Policy tab
