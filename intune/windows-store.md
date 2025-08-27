@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2025-08-27T11:17:31.295Z
+date: 2025-08-27T11:21:21.008Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -52,7 +52,7 @@ Unless you [have very specific requirements](https://learn.microsoft.com/en-us/m
 This not only turns off apps (yes, all of them), it also prevents those apps from receiving store updates. As a reminder, depending on your scenario, you may still need to update these apps for security reasons.
 
 ### Setting: "Do not connect to any Windows Update Internet locations"
-[This settings](https://learn.microsoft.com/en-us/windows/deployment/update/waas-wu-settings#do-not-connect-to-any-windows-update-internet-locations) was commonly set seemingly only allow updates from a defined WSUS server. This setting is also only in effect while one is configured. In reality it prevents store udpates and prevents [subscription activation](https://learn.microsoft.com/en-us/windows/deployment/deploy-enterprise-licenses?pivots=windows-11#make-sure-windows-update-isnt-blocked) amongst others
+[This settings](https://learn.microsoft.com/en-us/windows/deployment/update/waas-wu-settings#do-not-connect-to-any-windows-update-internet-locations) was commonly set to seemingly only allow updates from a defined WSUS server (it's also only in effect while one is configured). In reality it prevents store udpates and prevents [subscription activation](https://learn.microsoft.com/en-us/windows/deployment/deploy-enterprise-licenses?pivots=windows-11#make-sure-windows-update-isnt-blocked) amongst others
 
 ## Other store related settings
 If you set one of the following settings, you might encounter unexpected behavior. Verify that if you want to allow the above described scenario (Block user access | Allow store updates) these should _not_ be configured.
