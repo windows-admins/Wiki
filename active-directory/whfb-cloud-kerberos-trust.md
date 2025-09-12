@@ -2,7 +2,7 @@
 title: Windows Hello for Business - Cloud Kerberos Trust
 description: 
 published: true
-date: 2025-08-29T21:35:11.576Z
+date: 2025-09-12T19:26:41.344Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-31T14:54:12.491Z
@@ -30,6 +30,8 @@ Cloud Kerberos Trust simplifies this configuration greatly, utilizing the exisit
 > Additionally, if the user is not a member of `Domain Users` for some reason, this will prevent things from working "by default", as this is how users are able to use Entra Kerberos.
 {.is-danger}
 * You can test if an account can authenticate using Entra Kerberos by checking if password replication to the AzureADKerberos RODC object is allowed by doing the following:
+> Note: This action must be performed by a Domain Admin. Attempting to view this via a less privileged account will not show the correct results, most likely showing all accounts are denied.
+{.is-info}
   1. Open the properties window for the AzureADKerberos object and go to the Password Replication Policy tab
   2. Click Advanced, and select the Resultant Policy tab
   3. Click Add, and search for and select the user account(s) you want to check
