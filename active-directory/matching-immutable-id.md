@@ -2,7 +2,7 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2026-01-07T09:24:16.526Z
+date: 2026-01-07T11:33:08.291Z
 tags: immutable id, merge identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
@@ -67,6 +67,6 @@ Start-ADSyncSyncCycle -PolicyType Delta
 # Notes
 
 * Ensure that you have the necessary permissions to execute these commands.
-* Verify that the Azure AD Connect server is correctly configured and running.
+* Verify that the Entra Connect server is correctly configured and running.
 
 By following these steps, you can ensure that the on-premises AD user is correctly matched with the Entra user, preserving all cloud data and settings.
