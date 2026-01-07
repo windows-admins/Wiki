@@ -2,18 +2,18 @@
 title: Hard Match AD and Entra ID user - Immutable ID
 description: Connect On-Prem and Entra ID user in case of migration or similar
 published: true
-date: 2024-09-17T12:07:00.087Z
+date: 2026-01-07T09:24:16.526Z
 tags: immutable id, merge identities
 editor: markdown
 dateCreated: 2024-09-17T12:03:04.332Z
 ---
 
-# Matching Immutable IDs Between Azure AD and On-Premises AD Accounts
+# Matching Immutable IDs Between Entra and On-Premises AD Accounts
 ## Introduction and Purpose
-When managing users across both on-premises Active Directory (AD) and Azure Active Directory (AAD), it's essential to maintain consistency between the two environments. The Immutable ID is a unique identifier that ensures a user’s cloud identity (in AAD) matches their on-premises identity (in AD). This synchronization is crucial when:
+When managing users across both on-premises Active Directory (AD) and Entra, it's essential to maintain consistency between the two environments. The Immutable ID is a unique identifier that ensures a user’s cloud identity (in Entra) matches their on-premises identity (in AD). This synchronization is crucial when:
 
 * A user moves between domains, and their on-premises AD account needs to be moved without losing any associated cloud data (e.g., emails, OneDrive files).
-* An existing cloud-only Azure AD user needs to be synchronized back to an on-premises AD account.
+* An existing cloud-only Entra user needs to be synchronized back to an on-premises AD account.
 
 By correctly matching the Immutable ID between Azure AD and on-premises AD, you can maintain data integrity and seamless access for the user across both environments.
 
@@ -21,14 +21,15 @@ By correctly matching the Immutable ID between Azure AD and on-premises AD, you 
 Ensure the following PowerShell modules are installed:
 
 Active Directory Module
-Azure AD Module
+Microsoft.Graph.Users Module
 
 # Step-by-Step Instructions
-## Fetch the Azure AD Immutable ID
+## Fetch the Entra Immutable ID
 Use the following PowerShell command to get the Immutable ID of the Azure AD user:
 
 ```
-Get-AzureADUser -ObjectId "user@example.com" | Select-Object ImmutableId 
+connect-mggraph
+get-mguser -property OnPremisesImmutableId -userid "user@example.com" | select OnPremisesImmutableId 
 ```
 
 This command will output the Immutable ID for the user.
@@ -45,19 +46,19 @@ $immutableID
 ```
 This converts the on-prem AD user's **ObjectGUID** into a base64-encoded string, which is the format used for the Immutable ID in Azure AD.
 
-## Set the Immutable ID in Azure AD
+## Set the Immutable ID in Entra
 
-To update the Azure AD user with the on-prem AD Immutable ID, run the following command:
+To update the Entra user with the on-prem AD Immutable ID, run the following command:
 
 ``` 
-Set-AzureADUser -ObjectId "user@example.com" -ImmutableId "base64ImmutableID" 
+Set-MgUser -UserId "user@example.com" -OnPremisesImmutableId "base64ImmutableID"
 ```
 
-Replace "user@example.com" with the user's Azure AD Object ID and "base64ImmutableID" with the Base64 string obtained from the previous step.
+Replace "user@example.com" with the user's Entra Object ID and "base64ImmutableID" with the Base64 string obtained from the previous step.
 
-## Sync Azure AD with On-Premises AD
+## Sync Entra with On-Premises AD
 
-Wait for the next scheduled synchronization, or force a synchronization using the following command on your Azure AD Connect server:
+Wait for the next scheduled synchronization, or force a synchronization using the following command on your Entra Connect server:
 
 ``` 
 Start-ADSyncSyncCycle -PolicyType Delta 
@@ -68,4 +69,4 @@ Start-ADSyncSyncCycle -PolicyType Delta
 * Ensure that you have the necessary permissions to execute these commands.
 * Verify that the Azure AD Connect server is correctly configured and running.
 
-By following these steps, you can ensure that the on-premises AD user is correctly matched with the Azure AD user, preserving all cloud data and settings.
+By following these steps, you can ensure that the on-premises AD user is correctly matched with the Entra user, preserving all cloud data and settings.
