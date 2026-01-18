@@ -2,7 +2,7 @@
 title: Platform SSO
 description: SSO and Entra Join for MacOS
 published: true
-date: 2025-05-19T21:54:37.012Z
+date: 2026-01-18T21:28:30.177Z
 tags: sso, mdm
 editor: markdown
 dateCreated: 2024-12-05T15:41:33.868Z
@@ -73,7 +73,8 @@ Value: 1
 # Validating Functionality & Troubleshooting
 To verify if Platfrom SSO has been deployed successfully on a device, enter `app-sso platform -s` into a Terminal on a Mac and you should see an SSO Token. 
 
-Note: The Microsoft Intune Company Portal app functions as the authentication broker. If the app stops working, the authentication breaks.
+> The Microsoft Intune Company Portal app functions as the authentication broker. If the app stops working, the authentication breaks.
+{.is-info}
 
 # External Links
 * [Best Practices for Deploying Platform SSO with Microsoft Entra ID–Michael Epping, Mark Morowczynski](https://www.youtube.com/watch?v=NEoKLSuO3gw)
