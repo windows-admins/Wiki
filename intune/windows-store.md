@@ -2,7 +2,7 @@
 title: Windows Store
 description: Provides brief important information about the Windows Store
 published: true
-date: 2025-08-27T11:21:21.008Z
+date: 2026-04-27T14:57:11.675Z
 tags: intune, windows, csp, mdm, windows store
 editor: markdown
 dateCreated: 2023-07-25T19:41:32.958Z
@@ -26,7 +26,7 @@ Two settings are required to block the store while still allowing built-in appli
 - [RemoveWindowsStore _1(User) or _2(Device)](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2). This setting is ADMX-based, which means that other configurations (GPO or security tools) may interfere with this setting. Set this to "**Enabled**". Both the user and device settings have a note that reads **"If you enable this setting, you will be denied access to the Store application. Access to the Store is required to install application updates."** so we also need the following setting. 
 - [AllowAppStoreAutoUpdate](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate): Does what it says: Control the automatic update of Store applications. Set this to "Allowed.". If you don't set this preference and users have access to the store, [they can disable it themselves](https://support.microsoft.com/en-us/windows/turn-on-automatic-app-updates-70634d32-4657-dc76-632b-66048978e51b)
 
-> The ability to use WinGet (aka App Installer) to install applications is also removed by using *RemoveWindowsStore*.
+> The ability to use WinGet (aka App Installer) to install applications is also removed by using *RemoveWindowsStore*. This only for Store apps, as the source is removed. Other non-Store apps will work when using WinGet.
 {.is-warning}
 
 ### User Experience
