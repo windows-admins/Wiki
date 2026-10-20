@@ -18,6 +18,8 @@ Before adding stuff to this, please keep in mind: These articles are here to not
 
 |Title|Author|Date Added|Description|
 |-|-|-|-|
+|[Autopilot Deployment Doctor (beta scripts)](https://github.com/zakopenc/autopilot-deployment-doctor-beta)|[Abderrazak Elbouchikhi](https://zakitpro.com)|2026-10|Free read-only PowerShell tenant pre-check and device diagnostic for Autopilot and Device Preparation. Beta; test in non-production.|
+|[Win32 Deployment Doctor (beta scripts)](https://github.com/zakopenc/win32-deployment-doctor-beta)|[Abderrazak Elbouchikhi](https://zakitpro.com)|2026-10|Free read-only Win32 app tenant audit and IME log diagnostic. Beta; test in non-production.|
 |[Dealing With CVE-2023-24932, aka Remediating BlackLotus](https://ajf.one/blacklotus)|[Anthony Fontanez](https://ajf.one/me)|2025-05|A guide on remediating the BlackLotus vulnerability using Intune and ConfigMgr|
 |[From critisim to confidence - Windows Recall](https://stte.me/recallisgreat)|[James Robinson](https://mvp.microsoft.com/en-US/mvp/profile/0d76426f-95fb-ed11-8f6d-000d3a560942)|2025-05|If you ever had doubts if you should use Windows Recall or not, this is the entry for you.|
 |[To BitLocker pre-boot authenticate or not](https://manima.de/2025/04/to-bitlocker-pre-boot-authenticate-or-not/)|[Martin Himken](https://mvp.microsoft.com/en-US/mvp/profile/bb7408e7-f5ea-4afe-b1ff-e70e0414e04f)|2025-05|A short, critical look if you still need BitLocker pre-boot authentication in 2025|
